@@ -1,0 +1,573 @@
+@import './var', './mixin';
+
+$gridHistoryTransfer: repeat(2, minmax(260px, 450px)) minmax(110px, 310px) minmax(90px, 190px);
+$gridGraph12: repeat(12, minmax(29px, 80px));
+$gridGraph6: repeat(6, minmax(40px, 66px));
+
+.page-account-details {
+  &__header-top, &__header-bottom  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-top {
+    margin-bottom: 24px;
+  }
+
+  &__header-bottom {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include resetIndent;
+    // @include fontClass(34px, 1, 700);
+    // color: $color-black;
+  }
+
+  &__btn-back {
+    @include resetIndent;
+    @include coinBtn;
+    font-family: $ubuntu;
+    @include fontClass(16px, 1, 500);
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &__account-num {
+    @include resetIndent;
+    @include fontClass(34px, 1, 400);
+  }
+
+  &__detail-info {
+    padding-bottom: 30px;
+  }
+}
+
+.detail-info-grid {
+  display: grid;
+  grid-template-columns: minmax(606px, 723px) minmax(684px, 816px);
+  column-gap: 100px;
+  row-gap: 50px;
+}
+
+.detail-info-flex {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.balance {
+  &-text {
+    margin-right: 20px;
+    @include fontClass(20px, 1, 700);
+  }
+
+  &-amount {
+    @include fontClass(20px, 1, 400);
+  }
+}
+
+.detail-info-block{
+  padding: 25px 50px;
+  border-radius: 50px;
+
+  &__title {
+    @include resetIndent;
+    @include fontClass(20px, 1, 700);
+    color: $color-black;
+  }
+}
+
+.send-transfer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 300px));
+  row-gap: 25px;
+  background-color: #f3f4f6;
+
+  .input-group {
+    position: relative;
+    grid-column: 1/-1;
+    justify-self: flex-end;
+    font-family: $ubuntu;
+    @include fontClass(16px, 1, 500);
+  }
+
+  &__input-title {
+    margin-right: 18px;
+  }
+
+  &__input {
+    padding: 10px 16px;
+    width: 300px;
+    border: 1px solid $color-grey-light;
+    border-radius: 7px;
+    font-weight: 400;
+  }
+
+  &__send-btn {
+    @include resetIndent;
+    @include coinBtn;
+    @include fontClass(16px, 1, 500);
+    font-family: $ubuntu;
+    grid-column: 2/-1;
+    justify-self: flex-start;
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+.dropbox {
+  position: absolute;
+  right: 0;
+  border: 1px solid $color-grey-light;
+  border-radius: 7px;
+  background-color: $color-white;
+  z-index: 100;
+  overflow: hidden;
+
+  &.active {
+    display: block;
+  }
+
+  &__list {
+    @include resetIndent;
+  }
+
+  &__btn {
+    @include resetIndent;
+    padding: 15px 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+.history-balance-link {
+  @include resetIndent;
+}
+
+.dinamic-balance {
+  background-color: $color-white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}
+
+.graph {
+  display: grid;
+
+  &.graph-grid-6 {
+    grid-template-columns: minmax(450px, 600px) 89px;
+  }
+
+  &.graph-grid-12 {
+    grid-template-columns: minmax(726px, 1350px) 89px;
+  }
+
+  &__grid {
+    display: grid;
+    column-gap: 30px;
+    align-items: flex-end;
+    padding: 0 25px;
+    margin-right: 5px;
+    height: 165px;
+    border: 1px solid $color-black;
+
+    &.graph-grid-6 {
+      grid-template-columns: $gridGraph6;
+    }
+
+    &.graph-grid-12 {
+      grid-template-columns: $gridGraph12;
+    }
+
+  }
+
+  &__grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__total-amount {
+    background-color: $color-primary;
+  }
+  &__incoming-amount {
+    background-color: $color-green;
+  }
+  &__outgoing-amount {
+    background-color: $color-red;
+  }
+
+
+
+  &__os-x{
+    &-list {
+      @include resetIndent;
+      display: grid;
+      column-gap: 30px;
+      padding: 0 25px;
+
+      &.graph-grid-6 {
+        grid-template-columns: $gridGraph6;
+      }
+      &.graph-grid-12 {
+        grid-template-columns: $gridGraph12;
+      }
+    }
+    &-item {
+      text-align: center;
+      @include fontClass(16px, 1, 400);
+      color: $color-black
+    }
+  }
+
+  &__os-y {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__limit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include fontClass(16px, 1, 400);
+    color: $color-black;
+  }
+}
+
+.history-translates {
+  grid-column: 1/-1;
+  // height: 345px;
+  background-color: #f3f4f6;
+  border-radius: 50px;
+  color: $color-black;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    padding: 20px 50px;
+    background-color: $color-primary;
+    border-radius: 15px;
+  }
+
+  &__header-list {
+    @include resetIndent;
+    display: grid;
+    grid-template-columns: $gridHistoryTransfer;
+  }
+
+  &__header-item {
+    font-family: $ubuntu;
+    @include fontClass(20px, 1, 500);
+    color: $color-white;
+  }
+}
+
+
+.transfer {
+  padding: 0 50px;
+  max-height: 60%;
+  overflow-x: hidden;
+
+  &__list {
+    @include resetIndent;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: $gridHistoryTransfer;
+    padding: 20px 0;
+    border-bottom: 1px solid $color-black;
+  }
+
+  &__incoming {
+    color: $color-green;
+  }
+  &__outgoing {
+    color: $color-red;
+  }
+}
+
+
+@media(max-width: 1500px) {
+  .detail-info-grid {
+    grid-template-columns: minmax(400px, 723px) minmax(412px, 816px);
+    gap: 50px;
+  }
+
+  .send-transfer {
+    grid-template-columns: repeat(1, minmax(200px, 300px));
+
+    &__input-title {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      justify-self: flex-start;
+    }
+
+    &__send-btn {
+      grid-column: 1/-1;
+    }
+  }
+
+  .dinamic-balance {
+    height: 100%;
+  }
+
+  .graph {
+    &__grid {
+      height: 225px;
+    }
+  }
+
+  .transfer {
+    padding: 0;
+  }
+}
+
+@media(max-width: 1250px) {
+  .graph {
+    &.graph-grid-6 {
+      overflow: scroll;
+    }
+  }
+}
+
+@mixin transferTitle {
+  font-size: 12px;
+  color: $color-grey-light;
+  margin-right: 5px;
+}
+
+@media(max-width: 960px) {
+  $gridGraph6: repeat(6, minmax(40px, 90px));
+  $gridHistoryTransfer: repeat(2, minmax(0, 410px));
+
+  .page-account-details {
+    &__account-num {
+      font-size: 25px;
+    }
+
+    &__btn-back {
+      position: relative;
+      padding: 0;
+      background-color: transparent;
+      color: $color-primary;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 2px;
+        width: 10px;
+        height: 10px;
+        border-top: 3px solid $color-primary;
+        border-right: 3px solid $color-primary;
+        transform: rotate(-135deg);
+      }
+    }
+  }
+  .detail-info-grid {
+    grid-template-columns: minmax(0, 920px);
+  }
+
+  .send-transfer {
+    grid-template-columns: repeat(1, minmax(200px, 820px));
+
+    .input-group {
+      display: grid;
+      grid-template-columns: minmax(200px, 250px) minmax(200px, 550px);
+      align-items: center;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+  .graph {
+    &.graph-grid-6 {
+      grid-template-columns: minmax(450px, 730px) 89px;
+    }
+
+    &__grid {
+      &.graph-grid-6 {
+        grid-template-columns: $gridGraph6;
+      }
+    }
+
+    &__os-x-list {
+      &.graph-grid-6 {
+        grid-template-columns: $gridGraph6;
+      }
+    }
+  }
+
+  .history-translates {
+    &__header {
+      display: none;
+    }
+    &__header-list {
+      justify-items: center;
+    }
+  }
+
+  .transfer {
+    max-height: 75%;
+
+    &__item {
+      grid-template-columns: $gridHistoryTransfer;
+      // justify-items: center;
+      row-gap: 10px;
+      padding: 10px 0;
+    }
+
+    &__from {
+      order: 1;
+
+      &::before {
+        content: 'От';
+        @include transferTitle;
+      }
+    }
+    &__to {
+      order: 3;
+
+      &::before {
+        content: 'Кому';
+        @include transferTitle;
+      }
+    }
+    &__amount {
+      order: 2;
+      justify-self: flex-end;
+    }
+    &__date {
+      order: 4;
+      justify-self: flex-end;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .detail-info-block {
+    &__title {
+      font-size: 16px;
+    }
+  }
+
+  .dinamic-balance {
+    overflow: scroll;
+  }
+
+  .page-account-details {
+    &__account-num{
+      font-size: 18px;
+    }
+  }
+  .balance-text, .balance-amount {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 560px) {
+  .page-account-details {
+    &__header-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__account-num {
+      margin-bottom: 10px;
+    }
+  }
+
+  .send-transfer {
+    .input-group {
+      grid-template-columns: minmax(0, 400px);
+    }
+  }
+
+  .transfer {
+    &__item {
+      grid-template-columns: minmax(0, 420px);
+    }
+
+    &__amount {
+      order: 3;
+      justify-self: flex-start;
+
+      &::before {
+        content: 'Сумма';
+        @include transferTitle;
+      }
+    }
+
+    &__date {
+      justify-self: flex-start;
+
+      &::before {
+        content: 'Дата';
+        @include transferTitle;
+      }
+    }
+  }
+}
+
+@media(max-width:420px) {
+  .page-account-details {
+    &__header-bottom {
+      flex-direction: column;
+    }
+    &__account-num{
+      font-size: 16px;
+    }
+
+    &__btn-back {
+      font-size: 12px;
+    }
+  }
+
+  .detail-info-block {
+    padding: 25px 25px;
+    border-radius: 20px;
+  }
+
+  .balance-text, .balance-amount {
+    font-size: 16px;
+  }
+
+  .transfer {
+    &__item {
+      font-size: 14px;
+    }
+  }
+}

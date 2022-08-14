@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  "title": "Карточка товара"
+})
+<body>
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="basket" fill viewBox="0 0 30 28" xmlns="http://www.w3.org/2000/svg"><path d="M28.816 19.85H8.902l1-2.114 16.613-.03c.562 0 1.044-.417 1.144-.994l2.3-13.366a1.24 1.24 0 00-.25-.986 1.177 1.177 0 00-.399-.318 1.135 1.135 0 00-.49-.116L7.684 1.853l-.18-.881C7.39.41 6.901 0 6.346 0H1.18C.867 0 .567.13.346.359A1.25 1.25 0 000 1.225c0 .325.124.637.346.867.221.23.521.358.834.358h4.21l.79 3.895 1.943 9.764-2.502 4.238a1.253 1.253 0 00-.1 1.277c.2.413.605.673 1.054.673h2.1a3.645 3.645 0 00-.69 2.142c0 1.964 1.539 3.561 3.432 3.561s3.43-1.597 3.43-3.561c0-.774-.247-1.527-.688-2.142h5.387a3.645 3.645 0 00-.689 2.142c0 1.964 1.539 3.561 3.431 3.561 1.893 0 3.431-1.597 3.431-3.561 0-.774-.247-1.527-.688-2.142h3.789c.648 0 1.18-.548 1.18-1.225a1.253 1.253 0 00-.35-.864 1.163 1.163 0 00-.834-.358zM8.176 4.27l19.256.065-1.886 10.961-15.126.028L8.176 4.27zm3.24 21.266c-.581 0-1.056-.493-1.056-1.097s.475-1.097 1.057-1.097 1.056.493 1.056 1.097c0 .29-.11.57-.309.775a1.037 1.037 0 01-.747.322zm10.872 0c-.581 0-1.056-.493-1.056-1.097s.475-1.097 1.056-1.097c.582 0 1.057.493 1.057 1.097 0 .29-.111.57-.31.775a1.038 1.038 0 01-.747.322z" fill></path></symbol><symbol id="fb" fill viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M15 0C6.75 0 0 6.762 0 15.09 0 22.62 5.49 28.87 12.66 30V19.458H8.85V15.09h3.81v-3.328c0-3.78 2.235-5.858 5.67-5.858 1.635 0 3.345.286 3.345.286v3.72h-1.89c-1.86 0-2.445 1.16-2.445 2.349v2.831h4.17l-.675 4.368H17.34V30a14.985 14.985 0 009.075-5.105A15.097 15.097 0 0030 15.09C30 6.762 23.25 0 15 0z" fill></path></symbol><symbol id="instagram" fill viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M12.129 15a2.871 2.871 0 105.742 0 2.871 2.871 0 00-5.742 0z" fill></path><path d="M8.286 9.92c.138-.374.358-.713.644-.99.278-.287.616-.507.99-.645.304-.118.76-.258 1.6-.296.908-.042 1.18-.05 3.48-.05s2.573.008 3.48.05c.84.038 1.297.178 1.6.296.374.138.713.358.99.645.286.277.506.616.645.99.118.303.258.76.296 1.6.042.908.05 1.18.05 3.48s-.008 2.572-.05 3.48c-.038.84-.178 1.296-.296 1.6a2.67 2.67 0 01-.645.99 2.667 2.667 0 01-.99.644c-.303.119-.76.259-1.6.297-.907.041-1.18.05-3.48.05s-2.572-.009-3.48-.05c-.84-.038-1.296-.178-1.6-.297a2.852 2.852 0 01-1.634-1.634c-.118-.304-.259-.76-.297-1.6-.041-.908-.05-1.18-.05-3.48s.009-2.572.05-3.48c.038-.84.178-1.297.297-1.6zM15 19.423a4.423 4.423 0 100-8.846 4.423 4.423 0 000 8.846zm-4.598-7.987a1.034 1.034 0 100-2.068 1.034 1.034 0 000 2.068z" fill></path><path d="M15 0c8.283 0 15 6.717 15 15 0 8.283-6.717 15-15 15-8.283 0-15-6.717-15-15C0 6.717 6.717 0 15 0zM6.439 18.551c.041.917.187 1.543.4 2.09a4.404 4.404 0 002.52 2.52c.547.213 1.173.358 2.09.4.918.042 1.212.052 3.55.052 2.34 0 2.633-.01 3.552-.052.917-.042 1.543-.187 2.09-.4a4.22 4.22 0 001.526-.994c.438-.43.777-.95.994-1.525.213-.548.358-1.174.4-2.09.042-.92.052-1.213.052-3.552 0-2.34-.01-2.633-.052-3.551-.041-.917-.187-1.543-.4-2.09a4.22 4.22 0 00-.994-1.526 4.218 4.218 0 00-1.525-.994c-.548-.213-1.174-.358-2.09-.4-.92-.042-1.213-.052-3.552-.052-2.34 0-2.633.01-3.551.052-.917.042-1.543.187-2.09.4a4.222 4.222 0 00-1.527.994 4.22 4.22 0 00-.993 1.525c-.213.548-.359 1.174-.4 2.09-.042.92-.052 1.213-.052 3.552 0 2.34.01 2.633.052 3.551z" fill></path></symbol><symbol id="man" fill viewBox="0 0 26 28" xmlns="http://www.w3.org/2000/svg"><path d="M24.98 22.85a13.17 13.17 0 00-2.787-4.203 12.977 12.977 0 00-4.131-2.835l-.042-.018a8.752 8.752 0 003.554-7.07C21.574 3.904 17.737 0 13 0S4.426 3.905 4.426 8.724c0 2.909 1.4 5.487 3.554 7.073-.014.008-.028.011-.042.018a12.864 12.864 0 00-4.131 2.835 13.227 13.227 0 00-2.787 4.204A13.269 13.269 0 000 27.712a.286.286 0 00.079.203.276.276 0 00.198.085H2.35a.278.278 0 00.277-.274 10.576 10.576 0 013.035-7.187c1.96-1.994 4.564-3.092 7.337-3.092 2.773 0 5.376 1.098 7.337 3.092a10.576 10.576 0 013.035 7.187.276.276 0 00.277.274h2.074a.273.273 0 00.198-.085.282.282 0 00.079-.203 13.302 13.302 0 00-1.02-4.862zM13 14.774c-1.587 0-3.08-.63-4.204-1.773a6.064 6.064 0 01-1.743-4.277c0-1.615.62-3.135 1.743-4.278A5.857 5.857 0 0113 2.673c1.587 0 3.08.63 4.204 1.773a6.064 6.064 0 011.743 4.278A6.064 6.064 0 0117.204 13 5.857 5.857 0 0113 14.774z" fill></path></symbol><symbol id="phone" fill viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M16.343 12.098a10.49 10.49 0 01-3.236-.513.896.896 0 00-.926.22l-1.44 1.806c-2.593-1.238-5.023-3.575-6.315-6.261l1.787-1.522a.935.935 0 00.22-.935 10.223 10.223 0 01-.513-3.236.916.916 0 00-.907-.907H1.84C1.346.75.75.97.75 1.657c0 8.516 7.086 15.593 15.593 15.593.65 0 .907-.578.907-1.082v-3.162a.916.916 0 00-.907-.908z" fill></path></symbol><symbol id="question" fill viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 1.273a5.727 5.727 0 100 11.454A5.727 5.727 0 007 1.273zM0 7a7 7 0 1114 0A7 7 0 010 7zm7.164-2.53a1.273 1.273 0 00-1.415.832.636.636 0 11-1.201-.422 2.545 2.545 0 014.947.848c0 .974-.723 1.617-1.238 1.96a5.12 5.12 0 01-1.073.54l-.022.008-.007.003h-.003c-.001 0-.002.001-.203-.603l.201.604a.636.636 0 01-.403-1.207l.01-.004.048-.017a3.85 3.85 0 00.746-.382c.439-.293.67-.604.67-.903A1.273 1.273 0 007.165 4.47zm.472 5.712a.636.636 0 11-1.272 0 .636.636 0 011.272 0z" fill></path></symbol><symbol id="search" fill viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M15.819 14.063l-3.212-2.747a6.968 6.968 0 001.456-4.285c0-1.88-.734-3.642-2.06-4.97A6.98 6.98 0 007.03 0a6.99 6.99 0 00-4.97 2.06A6.975 6.975 0 000 7.031c0 1.878.734 3.645 2.06 4.971a6.975 6.975 0 004.971 2.06c1.57 0 3.061-.51 4.282-1.453l3.212 2.745a.193.193 0 00.272 0l1.022-1.02a.195.195 0 00.056-.136.193.193 0 00-.056-.136zm-5.075-3.32a5.222 5.222 0 01-3.713 1.538 5.222 5.222 0 01-3.712-1.537A5.222 5.222 0 011.78 7.03c0-1.401.546-2.72 1.538-3.712A5.222 5.222 0 017.03 1.78c1.402 0 2.721.544 3.713 1.538A5.222 5.222 0 0112.28 7.03a5.218 5.218 0 01-1.537 3.713z" fill></path></symbol><symbol id="vk" fill viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path d="M15 0C6.716 0 0 6.716 0 15c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15zm7.609 16.622c.699.683 1.439 1.326 2.066 2.08.278.333.54.677.74 1.065.285.553.027 1.159-.467 1.192l-3.073-.001c-.794.066-1.426-.255-1.958-.797-.425-.433-.82-.894-1.229-1.342a2.871 2.871 0 00-.553-.492c-.42-.272-.783-.189-1.023.249-.245.445-.3.939-.324 1.434-.033.725-.252.914-.979.948-1.554.073-3.028-.163-4.398-.946-1.208-.69-2.144-1.666-2.959-2.77-1.587-2.152-2.803-4.514-3.895-6.944-.246-.547-.066-.84.538-.85a85.522 85.522 0 013.009-.002c.408.007.678.24.835.625.542 1.334 1.206 2.603 2.039 3.78.222.313.448.625.77.846.357.245.628.164.796-.233.107-.253.154-.523.177-.794.08-.927.09-1.854-.049-2.777-.086-.578-.41-.951-.987-1.06-.293-.056-.25-.165-.108-.332.248-.29.48-.47.944-.47h3.472c.547.107.67.353.744.904l.003 3.859c-.006.213.107.845.49.985.307.101.51-.145.693-.34.833-.883 1.426-1.926 1.957-3.005.235-.476.437-.969.634-1.462.146-.365.373-.545.785-.539l3.343.004c.099 0 .199.001.296.018.564.097.718.339.544.889-.275.863-.808 1.583-1.329 2.304-.558.772-1.154 1.517-1.707 2.293-.508.709-.468 1.066.163 1.681z" fill></path></symbol></svg>
+  @@include('html/header.html', {
+    "page": "cardpage",
+    "currentPage": "Каталог",
+    "currentSubPage": "Диваны",
+    "currentSubSubPage": "Прямые диваны",
+    "model": "D-31"
+  })
+
+  <main>
+    <section class="cardpage-section-card">
+      <div class="container cardpage">
+        <div class="cardpage__grid-table">
+          <div class="cardpage__img-block">
+            <picture class="cardpage__main-pic">
+              <source srcset="@img/cardpage-d31-1024.png" media="(max-width: 1024px)">
+              <img class="cardpage__main-img" src="@img/cardpage-d31.png" alt="Диван тканевый прямой “D-31”">
+            </picture>
+
+            <div class="cardpage-mini-img">
+              @@include('html/cardpage-mini-img-swiper.html',
+                {"swiper": "mini-img-slides"}
+              )
+            </div>
+          </div>
+
+          <div class="cardpage__heading">
+            <img class="cardpage__heading-img" src="@img/cardpage-mini-d31-768.jpg" alt="Диван тканевый прямой “D-31”" aria-hidden="true">
+            <div class="cardpage__heading-info">
+              <span class="cardpage__rate">
+                4,8
+              </span>
+              <h1 class="cardpage__title">Диван тканевый прямой “D-31”</h1>
+              <p class="cardpage__subtitle">Мини 120 см без ящика Stark синий (Рогожка)</p>
+              <p class="cardpage__price">28 490 руб</p>
+              <div class="cardpage__btns">
+                <button class="cardpage__buy-btn reset">Купить в один клик</button>
+                <button class="cardpage__add-in-basket-btn reset">+ Добавить в корзину</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardpage__desc-block">
+            <h3 class="cardpage__desc-title">Опорный механизм</h3>
+            <p class="cardpage__desc-text">
+              Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию. У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный штрих — опустить спинку.
+            </p>
+            <p class="cardpage__desc-text">
+              Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но подросток справится.
+            </p>
+            <picture class="cardpage__desc-pic">
+              <source srcset="@img/cardpage-mech-img-420.png" media="(max-width: 420px)">
+              <img class="cardpage__desc-img" src="@img/cardpage-mech-img.png" alt="Механизм дивана">
+            </picture>
+          </div>
+
+          <div class="cardpage__content">
+            <ul class="content-list reset">
+              @@loop('html/cardpage-content.html', [
+              {"title": "Гарантия", "desc": "18 месяцев"},
+              {"title": "Артикул", "desc": "AAA41269004"},
+              {"title": "Длина", "desc": "163 см"},
+              {"title": "Высота", "desc": "90 см"},
+              {"title": "Глубина", "desc": "108 см"},
+              {"title": "Спальное место", "desc": "200 см х 125 см"},
+              {"title": "Высота посадки", "desc": "45 см"},
+              {"title": "Механизм", "desc": "Опорный"},
+              {"title": "Тип обивки", "desc": "Рогожка"},
+              {"title": "Цвет", "desc": "Синий"},
+              {"title": "Наполнитель", "desc": "Независимый пружинный блок"},
+              {"title": "Материал каркаса", "desc": "Металл. рама с дерев. латами"},
+              {"title": "Количество мест", "desc": "Двухместные"},
+              {"title": "Категория", "desc": "Прямые тканевые диваны"},
+              {"title": "Возврат", "desc": "Условия"},
+              ])
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-callback modal-inactive">
+        <h3 class="modal-callback__title">Купить в один клик</h3>
+        <p class="modal-callback__desc">Чтобы оформить заказ — заполните формы ниже и наш менеджер свяжется с вами в течении часа.</p>
+        @@include('html/appl-form.html',
+        {
+          "email": "false",
+          "formId": "appl-form-modal",
+        })
+      </div>
+
+      <div class="modal-img modal-inactive">
+        <picture class="modal-img__pic">
+          <source srcset="@img/modal-img-d31-420.png" media="(max-width: 420px)">
+          <source srcset="@img/modal-img-d31-768.png" media="(max-width: 768px)">
+          <source srcset="@img/modal-img-d31-1024.png" media="(max-width: 1024px)">
+          <img class="modal-img__img" src="@img/modal-img-d31.png" alt="Диван тканевый прямой “D-31”">
+        </picture>
+
+        <div class="cardpage-mini-img">
+          <div class="cardpage-mini-img__swiper">
+            <button class="modal-img__nav-btn reset modal-img__btn-prev" aria-label="К предыдущему слайду"></button>
+            <div class="swiper-container slides-container mini-img-slides-modal">
+              <ul class="cardpage-mini-img__slides-list swiper-wrapper reset">
+                <li class="swiper-slide cardpage-mini-img__slide">
+                  <img src="@img/modal-mini-img-d31-1.png" alt="Диван тканевый прямой “D-31”" aria-hidden="true">
+                </li>
+                <li class="swiper-slide cardpage-mini-img__slide">
+                  <img src="@img/modal-mini-img-d31-2.png" alt="Диван тканевый прямой “D-31”" aria-hidden="true">
+                </li>
+                <li class="swiper-slide cardpage-mini-img__slide">
+                  <img src="@img/modal-mini-img-d31-3.png" alt="Диван тканевый прямой “D-31”" aria-hidden="true">
+                </li>
+                <li class="swiper-slide cardpage-mini-img__slide">
+                  <img src="@img/modal-mini-img-d31-4.png" alt="Диван тканевый прямой “D-31”" aria-hidden="true">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <button class="modal-img__nav-btn reset modal-img__btn-next" aria-label="К следующему слайду"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cardpage-section-similar-prod">
+      <div class="container">
+        <h2 class="cardpage-section-similar-prod__title section-title">Похожие товары</h2>
+
+        <div class="cardpage-section-similar-prod__swiper">
+          <div class="cardpage-section-similar-prod__navigation">
+            <button class="cardpage-section-similar-prod__nav-btn reset cardpage-section-similar-prod__btn-prev" aria-label="К предыдущему слайду"></button>
+            <button class="cardpage-section-similar-prod__nav-btn reset cardpage-section-similar-prod__btn-next" aria-label="К следующему слайду"></button>
+          </div>
+
+          <div class="swiper-container slides-container similar-prod">
+            <ul class="cardpage-section-similar-prod__slides-list swiper-wrapper reset">
+              @@loop('html/highrate-card-product.html', "json/similar-card-product-data.json")
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @@include('html/footer.html',{})
+</body>
+</html>

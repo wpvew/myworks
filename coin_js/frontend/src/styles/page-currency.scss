@@ -1,0 +1,308 @@
+@import './var', './mixin';
+
+.page-currency {
+  padding-bottom: 35px;
+
+  // &__title {
+  //   @include resetIndent;
+  //   margin-bottom: 55px;
+  //   @include fontClass(34px, 1, 700);
+  // }
+
+  &__grid-table {
+    display: grid;
+    grid-template-columns: minmax(0, 660px) minmax(0, 860px);
+    gap: 80px;
+  }
+
+  &__grid-item {
+    padding: 50px;
+    border-radius: 50px;
+  }
+}
+
+.currency-accounts {
+  // border-radius: 50px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+  &__title {
+    @include resetIndent;
+    margin-bottom: 25px;
+    @include fontClass(20px, 1, 700);
+  }
+
+  &__list {
+    @include resetIndent;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.currency-item {
+  display: flex;
+
+  &:first-child {
+    width: 100%;
+  }
+
+  &__name {
+    @include fontClass(20px, 1, 600);
+  }
+
+  &__amount {
+    @include fontClass(20px, 1, 400);
+  }
+
+  &__dotted {
+    display: block;
+    align-self: flex-end;
+    margin: 0 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 1em;
+    border-bottom: 2px dotted;
+  }
+
+  &__arrow-up, &__arrow-down {
+    margin-left: 5px;
+    border: 10px solid transparent;
+  }
+
+  &__arrow-up {
+    transform: rotate(90deg) translateX(-5px);
+    border-right: 8px solid $color-green;
+  }
+
+  &__arrow-down {
+    transform: rotate(-90deg) translateX(-5px);
+    border-right: 8px solid $color-red;
+  }
+}
+
+
+.currency-status {
+  max-height: 1064px;
+  // border-radius: 50px;
+  background-color: #e5e5e5;
+  grid-row: 1/3;
+  grid-column: 2/-1;
+
+  &__title {
+    @include resetIndent;
+    @include fontClass(20px, 1, 700);
+  }
+
+  &__window {
+    padding-top: 25px;
+    height: 100%;
+    overflow: hidden
+  }
+
+  &__list {
+    @include resetIndent;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.dotted {
+  &-up {
+    border-color: $color-green;
+  }
+  &-down {
+    border-color: $color-red;
+  }
+}
+
+
+
+.currency-exchange {
+  // border-radius: 50px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+
+  &.success {
+    box-shadow: 0px 5px 20px rgba($color-green, 1);
+  }
+
+  &__title {
+    @include resetIndent;
+    margin-bottom: 25px;
+    @include fontClass(20px, 1, 700);
+  }
+}
+
+.exchange-form {
+  display: grid;
+  grid-template-columns: minmax(75px, 410px) minmax(0, 120px);
+  gap: 30px;
+
+  &__selectors {
+    display: flex;
+    justify-content: space-between;
+  }
+  .select-group {
+    display: flex;
+    align-items: center;
+  }
+
+  &__select-title {
+    margin-right: 30px;
+  }
+
+  .choices {
+    max-width: 150px;
+
+    .choices__list--single {
+      padding: 0;
+    }
+  }
+
+  &__amount {
+    grid-column: 1/2;
+  }
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-title {
+    margin-right: 30px;
+  }
+
+  &__input {
+    padding: 7px 7px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    @include fontClass(16px, 24px, 400);
+
+  }
+
+  &__btn {
+    grid-column: 2/-1;
+    grid-row: 1/3;
+    @include coinBtn;
+    padding: 16px 20px;
+    font-family: $ubuntu;
+    @include fontClass(16px, 1, 500);
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}
+
+@media(max-width: 1500px) {
+  .exchange-form {
+    &__selectors {
+      flex-direction: column;
+    }
+
+    .select-group {
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    .choices {
+      margin: 0;
+      width: 100%;
+      max-width: 75%;
+    }
+  }
+}
+
+@media(max-width: 1250px) {
+  .page-currency {
+    &__grid-table {
+      gap: 30px;
+    }
+  }
+
+  .exchange-form {
+    gap: 15px;
+  }
+}
+
+@media(max-width: 960px) {
+  .page-currency {
+    &__grid-item {
+      padding: 25px;
+      border-radius: 25px;
+    }
+  }
+
+  .exchange-form {
+    grid-template-columns: minmax(0, 395px);
+
+    &__btn {
+      grid-column: 1/-1;
+      grid-row: unset;
+    }
+  }
+
+  .currency-status {
+    &__window {
+      height: 93%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .page-currency {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  .currency-item {
+    &__name, &__amount {
+      font-size: 16px;
+    }
+  }
+
+}
+
+@media(max-width: 560px) {
+  .page-currency {
+    &__grid-table {
+      grid-template-columns: minmax(300px, 520px);
+    }
+  }
+
+  .currency-status {
+    grid-column: 1/-1;
+    grid-row: unset;
+    order: 3;
+
+    &__window {
+      height: 96%;
+    }
+  }
+
+  .currency-accounts {
+    order: 1;
+  }
+
+  .currency-exchange  {
+    order: 2;
+  }
+}

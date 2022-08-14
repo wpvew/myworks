@@ -1,0 +1,87 @@
+@import '_var.scss', '_mixin.scss';
+
+.catalog-check {
+  position: relative;
+  margin-bottom: 11px;
+  display: flex;
+  cursor: pointer;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &__title-checkbox {
+    @include fontClass(16px, 130%, 400);
+    color: $color-grey-shade;
+    transition: color .3s ease-in-out;
+  }
+
+  &__base-checkbox {
+    position: absolute;
+    opacity: 0;
+
+    &:checked + .catalog-check__custom-checkbox::after {
+      opacity: 1;
+    }
+    &:checked + .catalog-check__custom-checkbox {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &.focus-visible + .catalog-check__custom-checkbox{
+      outline: 1px solid $color-primary;
+    }
+
+    &.focus-visible ~ .catalog-check__title-checkbox{
+      color: $color-primary;
+    }
+  }
+
+  &__custom-checkbox {
+    position: relative;
+    margin-right: 12px;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-grey;
+    border-radius: 2px;
+    transition: background-color .2s ease-in-out, border-color .2s ease-in-out, outline .1s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url('../img/accept.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+    }
+  }
+
+  &:hover > &__title-checkbox {
+    color: $color-primary;
+  }
+
+  &:active > &__title-checkbox {
+    color: $color-primary-shade;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .catalog-check {
+    &__title-checkbox {
+      font-size: 14px;
+    }
+
+    &__custom-checkbox {
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+    }
+  }
+}

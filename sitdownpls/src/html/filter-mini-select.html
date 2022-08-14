@@ -1,0 +1,82 @@
+<div class="filter-mini-select">
+  <button class="filter-mini-select__btn reset js-header-dropdown-btn" data-path="@@filterTarget-select">
+    <span class="filter-mini-select__heading">
+      @@filter
+    </span>
+  </button>
+
+  <div class="filter-mini-select__dropdown js-header-drop" data-target="@@filterTarget-select">
+    <div class="filter-mini-select__dropdown-wrap" data-simplebar>
+      @@if(context.filter == 'Категория'){
+        @@loop('custom-checkbox.html',
+        [
+          {"name": "Диваны", "type": "category"},
+          {"name": "Кресла", "type": "category"},
+          {"name": "Пуфы", "type": "category"},
+          {"name": "Кровати", "type": "category"},
+          {"name": "Тумбы", "type": "category"},
+          {"name": "Комоды", "type": "category"},
+          {"name": "Стулья", "type": "category"},
+          {"name": "Столы", "type": "category"},
+          {"name": "Аксессуары", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+          {"name": "empty item", "type": "category"},
+        ]
+        );
+      }
+      @@if(context.filter == 'Цена'){
+        <div class="filter-mini-select__price-block" id="range-slider-mini">
+          <label class="filter-mini-select__price-label">
+            <span class="filter-mini-select__price-text">от</span>
+            <input class="filter-mini-select__price-input price-input" type="number" name="from" min="0" max="250000" value="2000" data-type-check="price">
+          </label>
+          <label class="filter-mini-select__price-label">
+            <span class="filter-mini-select__price-text">до</span>
+            <input class="filter-mini-select__price-input price-input" type="number" name="to" min="0" max="250000" value="150000" data-type-check="price">
+          </label>
+        </div>
+      }
+      @@if(context.filter == 'Скидка'){
+        @@loop('custom-checkbox.html', [
+        {"name": "Более 5 000", "type": "sale", "radioBtn": "radio"},
+        {"name": "Менее 5 000", "type": "sale", "radioBtn": "radio"},
+        {"name": "Не важно", "type": "sale", "radioBtn": "radio"},
+        ]);
+      }
+      @@if(context.filter == 'Цвет'){
+        @@loop('custom-checkbox.html', [
+        {"name": "Коричневый", "type": "color"},
+        {"name": "Черный", "type": "color"},
+        {"name": "Бежевый", "type": "color"},
+        {"name": "Серый", "type": "color"},
+        {"name": "Белый", "type": "color"},
+        {"name": "Синий", "type": "color"},
+        {"name": "Оранжевый", "type": "color"},
+        {"name": "Желтый", "type": "color"},
+        {"name": "Зеленый", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        {"name": "empty item", "type": "color"},
+        ]);
+      }
+    </div>
+    <button class="open-more-btn reset">
+      + еще
+      <span class="open-more-btn__result"></span>
+    </button>
+  </div>
+</div>

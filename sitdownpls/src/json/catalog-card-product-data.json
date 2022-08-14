@@ -1,0 +1,146 @@
+[
+  {
+    "title": "Диван кожаный",
+    "model": "R-94",
+    "price": "94 990",
+    "rate": "5,0",
+    "img": "@img/card-item-r94.png",
+    "img420": "@img/card-item-r94-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "Y-68",
+    "price": "22 990",
+    "rate": "4,8",
+    "img": "@img/card-item-y68.png",
+    "img420": "@img/card-item-y68-420.png"
+  },
+  {
+    "title": "Диван шиниловый",
+    "model": "V-43",
+    "price": "19 990",
+    "rate": "4,8",
+    "img": "@img/card-item-v43.png",
+    "img420": "@img/card-item-v43-420.png"
+  },
+  {
+    "title": "Диван апартековый",
+    "model": "T-75",
+    "price": "69 990",
+    "rate": "4,9",
+    "img": "@img/card-item-t75.png",
+    "img420": "@img/card-item-t75-420.png"
+  },
+  {
+    "title": "Диван из шинила",
+    "model": "W-95",
+    "price": "22 990",
+    "rate": "4,8",
+    "img": "@img/card-item-w95.png",
+    "img420": "@img/card-item-w95-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "S-99",
+    "price": "19 990",
+    "rate": "4,7",
+    "img": "@img/card-item-s99.png",
+    "img420": "@img/card-item-s99-420.png"
+  },
+  {
+    "title": "Диван тканевый",
+    "model": "D-31",
+    "price": "28 490",
+    "rate": "4,8",
+    "img": "@img/card-item-d31.png",
+    "img420": "@img/card-item-d31-420.png"
+  },
+  {
+    "title": "Диван флоковый",
+    "model": "G-41",
+    "price": "17 990",
+    "rate": "4,8",
+    "img": "@img/card-item-g41.png",
+    "img420": "@img/card-item-g41-420.png"
+  },
+  {
+    "title": "Диван из кожзама",
+    "model": "F-85",
+    "price": "26 990",
+    "rate": "4,7",
+    "img": "@img/card-item-f85.png",
+    "img420": "@img/card-item-f85-420.png"
+  },
+  {
+    "title": "Диван флоковый",
+    "model": "H-64",
+    "price": "25 990",
+    "rate": "4,6",
+    "img": "@img/card-item-h64.png",
+    "img420": "@img/card-item-h64-420.png"
+  },
+  {
+    "title": "Диван из шинила",
+    "model": "С-42",
+    "price": "18 990",
+    "rate": "4,6",
+    "img": "@img/card-item-c42.png",
+    "img420": "@img/card-item-c42-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "R-85",
+    "price": "34 990",
+    "rate": "4,5",
+    "img": "@img/card-item-r85.png",
+    "img420": "@img/card-item-r85-420.png"
+  },
+  {
+    "title": "Диван флоковый",
+    "model": "H-58",
+    "price": "23 990",
+    "rate": "4,6",
+    "img": "@img/card-item-h58.png",
+    "img420": "@img/card-item-h58-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "U-58",
+    "price": "21 990",
+    "rate": "4,6",
+    "img": "@img/card-item-u58.png",
+    "img420": "@img/card-item-u58-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "S-44",
+    "price": "19 990",
+    "rate": "4,5",
+    "img": "@img/card-item-ss44.png",
+    "img420": "@img/card-item-s44-420.png"
+  },
+  {
+    "title": "Диван из кожзама",
+    "model": "R-43",
+    "price": "33 990",
+    "rate": "4,6",
+    "img": "@img/card-item-r43.png",
+    "img420": "@img/card-item-r43-420.png"
+  },
+  {
+    "title": "Диван флоковый",
+    "model": "F-41",
+    "price": "17 990",
+    "rate": "4,5",
+    "img": "@img/card-item-f41.png",
+    "img420": "@img/card-item-f41-420.png"
+  },
+  {
+    "title": "Диван из шинила",
+    "model": "С-80",
+    "price": "20 990",
+    "rate": "4,4",
+    "img": "@img/card-item-c80.png",
+    "img420": "@img/card-item-c80-420.png"
+  }
+]

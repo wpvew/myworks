@@ -1,0 +1,33 @@
+@import '_var.scss', '_mixin.scss';
+
+.svg-close-contact {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.svg-add-contact {
+  margin-right: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  fill: $color-primary;
+  box-shadow: inset 0 0 0 1px $color-grey-ultra-light;
+  transition: background-color .3s ease-in-out, fill .3s ease-in-out;
+}
+
+.svg-sort-arrow {
+  margin-left: 4px;
+  margin-right: 4px;
+  width: 10px;
+  height: 10px;
+  fill: rgba($color-primary, 0.7);
+  transform: rotate(180deg);
+}
+
+.svg-pen {
+  margin-right: 1px;
+  width: 12px;
+  height: 12px;
+}

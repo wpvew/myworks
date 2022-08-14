@@ -1,0 +1,10 @@
+<label class="catalog-check">
+  @@if(context.radioBtn == 'radio') {
+    <input class="catalog-check__base-checkbox" type="radio" name="@@type" value="@@name" data-type-check="@@type">
+  }
+  @@if (!context.radioBtn) {
+    <input class="catalog-check__base-checkbox" type="checkbox" name="@@type" value="@@name" data-type-check="@@type">
+  }
+  <span class="catalog-check__custom-checkbox"></span>
+  <span class="catalog-check__title-checkbox">@@name</span>
+</label>

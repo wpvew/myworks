@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Диваны",
+    "category1": "Прямые",
+    "category2": "Угловые",
+    "category3": "Модульные",
+    "img": "@img/top-cat-sofa.png",
+    "img420": "@img/top-cat-sofa-420.png",
+    "img1024": "@img/top-cat-sofa-1024.png"
+  },
+  {
+    "title": "Кресла",
+    "category1": "Мягкие",
+    "category2": "Кресла-кровати",
+    "img": "@img/top-cat-armchair.png",
+    "img420": "@img/top-cat-armchair-420.png",
+    "img1024": "@img/top-cat-armchair-1024.png"
+  },
+  {
+    "title": "Кровати",
+    "category1": "Односпальные",
+    "category2": "Двуспальные",
+    "img": "@img/top-cat-bed.png",
+    "img420": "@img/top-cat-bed-420.png",
+    "img1024": "@img/top-cat-bed-1024.png"
+  },
+  {
+    "title": "Тумбы и комоды",
+    "category1": "Тумбы",
+    "category2": "Комоды",
+    "img": "@img/top-cat-dresser.png",
+    "img420": "@img/top-cat-dresser-420.png",
+    "img1024": "@img/top-cat-dresser-1024.png"
+  },
+  {
+    "title": "Стулья",
+    "category1": "Деревянные",
+    "category2": "Металлокаркас",
+    "img": "@img/top-cat-chair.png",
+    "img420": "@img/top-cat-chair-420.png",
+    "img1024": "@img/top-cat-chair-1024.png"
+  }
+]

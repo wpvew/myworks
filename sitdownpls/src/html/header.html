@@ -1,0 +1,231 @@
+<header class="header">
+  <div class="container">
+    <div class="header__grid-table">
+      <div class="header__grid-element">
+        <div class="location">
+          <span class="location__text">Ваш регион:</span>
+          <select class="location__city-selector" id="selector-city" name="select">
+            <option value="Москва">Москва</option>
+            <option value="Казань">Казань</option>
+            <option value="Уфа">Уфа</option>
+            <option value="Пермь">Пермь</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="header__grid-element">
+        <a class="header__phone reset" href="tel:+74958854547" aria-label="Телефон">
+          <svg aria-hidden="true">
+            <use xlink:href="#phone"></use>
+          </svg>
+          +7 (495) 885-45-47
+        </a>
+      </div>
+
+      <nav class="navbar-company header__grid-element desktop-menu">
+        <ul class="navbar-company__list reset">
+          <li class="navbar-company__item">
+            <a class="navbar-company__link reset" href="#">
+              О компании
+            </a>
+          </li>
+          <li class="navbar-company__item">
+            <a class="navbar-company__link reset" href="#">
+              Гарантия и возврат
+            </a>
+          </li>
+          <li class="navbar-company__item">
+            <a class="navbar-company__link reset" href="#">
+              Корпоративным клиентам
+            </a>
+          </li>
+          <li class="navbar-company__item">
+            <a class="navbar-company__link reset" href="#">
+              Дизайн-решение
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="burger header__grid-element reset" aria-label="Открыть меню">
+        <span class="burger__item"></span>
+      </button>
+
+      <a class="header__logo header__grid-element reset" href="index.html">
+        <img src="@img/logo.svg" alt="Логотип">
+      </a>
+
+      <nav class="navbar-menu header__grid-element">
+        <div class="navbar-menu__container">
+          <ul class="navbar-menu__list reset">
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="catalog.html">
+                Каталог
+              </a>
+            </li>
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="#">
+                Магазины
+              </a>
+            </li>
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="#">
+                Шоу-рум
+              </a>
+            </li>
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="#">
+                Доставка и оплата
+              </a>
+            </li>
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="#">
+                Дисконт
+              </a>
+            </li>
+            <li class="navbar-menu__item">
+              <a class="navbar-menu__link reset" href="contact.html">
+                Контакты
+              </a>
+            </li>
+          </ul>
+
+          <nav class="navbar-company mobile-menu">
+            <ul class="navbar-company__list reset">
+              <li class="navbar-company__item">
+                <a class="navbar-company__link reset" href="#">
+                  О компании
+                </a>
+              </li>
+              <li class="navbar-company__item">
+                <a class="navbar-company__link reset" href="#">
+                  Гарантия и возврат
+                </a>
+              </li>
+              <li class="navbar-company__item">
+                <a class="navbar-company__link reset" href="#">
+                  Корпоративным клиентам
+                </a>
+              </li>
+              <li class="navbar-company__item">
+                <a class="navbar-company__link reset" href="#">
+                  Дизайн-решение
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="header__grid-element">
+        <form class="search-form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+          <span class="search-form__btn-mag reset" aria-hidden="true">
+            <svg class="search-svg">
+              <use xlink:href="#search"></use>
+            </svg>
+          </span>
+          <input class="search-form__input reset" type="text" name="search" placeholder="Я хочу купить...">
+          <button class="search-form__btn-arrow reset" aria-label="Найти" type="submit"></button>
+        </form>
+        <div class="catalog-select">
+          <button class="catalog-select__btn reset js-header-dropdown-btn" data-path="one">
+            <span class="catalog-select__heading">
+              Категория
+            </span>
+          </button>
+
+          <div class="catalog-select__dropdown js-header-drop" data-target="one">
+            <div class="catalog-select__dropdown-wrap" data-simplebar>
+              <ul class="catalog-select__category-list reset">
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Диваны</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Кресла</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Пуфы</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Кровати</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Тумбы</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Комоды</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Стулья</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Столы</a>
+                </li>
+                <li class="catalog-select__category-item">
+                  <a class="catalog-select__category-link reset" href="catalog.html">Аксессуары</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header__grid-element">
+        <button class="login-btn reset" aria-label="Входа в личный кабинет">
+          <svg aria-hidden="true">
+            <use xlink:href="#man"></use>
+          </svg>
+        </button>
+        <button class="basket-btn reset" aria-label="Корзина, количество позиций">
+          <span class="basket-btn__counter">0</span>
+          <svg aria-hidden="true">
+            <use xlink:href="#basket"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    @@if(context.page != 'main') {
+      <nav class="navbar-current-page">
+        <ul class="navbar-current-page__list reset">
+          <li class="navbar-current-page__item">
+            <a href="index.html" class="navbar-current-page__link reset">
+              Главная
+            </a>
+          </li>
+          <li class="navbar-current-page__item">
+            <span class="navbar-current-page__slash">/</span>
+            <a href="#" class="navbar-current-page__link reset">
+              @@currentPage
+            </a>
+          </li>
+          @@if(context.currentSubPage) {
+            <li class="navbar-current-page__item">
+              <span class="navbar-current-page__slash">/</span>
+              <a href="#" class="navbar-current-page__link reset">
+                @@currentSubPage
+              </a>
+            </li>
+          }
+          @@if(context.currentSubSubPage){
+            <li class="navbar-current-page__item">
+              <span class="navbar-current-page__slash">/</span>
+              <a href="catalog.html" class="navbar-current-page__link reset">
+                @@currentSubSubPage
+              </a>
+            </li>
+          }
+          @@if(context.model) {
+            <li class="navbar-current-page__item">
+              <span class="navbar-current-page__slash">/</span>
+              <a href="#" class="navbar-current-page__link reset">
+                @@model
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    }
+
+  </div>
+</header>

@@ -1,0 +1,45 @@
+<li class="section-top-cat__grid-element">
+  <article class="top-cat-card">
+    <ul class="top-cat-card__categories-list reset">
+      <li class="top-cat-card__categories-item">
+        @@category1
+      </li>
+      @@if (context.category2){
+        <li class="top-cat-card__categories-item">
+          @@category2
+        </li>
+      }
+      @@if (context.category3){
+        <li class="top-cat-card__categories-item">
+          @@category3
+        </li>
+      }
+      @@if (context.category4){
+        <li class="top-cat-card__categories-item">
+          @@category4
+        </li>
+      }
+    </ul>
+    <h3 class="top-cat-card__title">
+      <span class="top-cat-card__heading">
+        @@title
+      </span>
+      <!-- <a href="#" class="top-cat-card__link title-link reset">
+        <span class="top-cat-card__link-arrow"></span>
+      </a> -->
+    </h3>
+    <picture class="top-cat-card__pic">
+      <source srcset="@@img420" media="(max-width: 420px)">
+      <source srcset="@@img" media="(max-width: 600px)">
+      <source srcset="@@img1024" media="(max-width: 1024px)">
+      <img class="top-cat-card__img" src="@@img" alt="">
+      <!-- <img class="top-cat-card__img lazyload" data-src="@@img" alt="@@title" aria-hidden="true"> -->
+    </picture>
+    <a href="catalog.html" class="top-cat-card__link catalog-link reset">
+      <span class="top-cat-card__link-text">
+        В каталог
+      </span>
+      <span class="top-cat-card__link-arrow"></span>
+    </a>
+  </article>
+</li>

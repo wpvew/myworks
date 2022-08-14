@@ -1,0 +1,31 @@
+<form action="https://jsonplaceholder.typicode.com/posts" method="POST" autocomplete="off" class="appl-form" id="@@formId">
+  <div class="appl-form__input-group" >
+    <input class="appl-form__input" type="text" name="name" id="name" autocomplete="off" placeholder="Как вас зовут?" required>
+  </div>
+  <div class="appl-form__input-group">
+    <input class="appl-form__input" type="tel" name="phone" id="formPhone" autocomplete="off" placeholder="Ваш телефон" required>
+  </div>
+  @@if(context.email == 'true') {
+    <div class="appl-form__input-group" >
+      <input class="appl-form__input" type="email" name="email" id="email" autocomplete="off" placeholder="Ваш e-mail" required>
+    </div>
+  }
+  <button class="appl-form__btn reset" type="submit">Отправить</button>
+  <label class="appl-form__check-label" for="appl-check" id="appl-check-group">
+    <input class="appl-form__base-checkbox" type="checkbox" id="appl-check" required>
+    <span class="appl-form__custom-checkbox"></span>
+    <span class="appl-form__title-checkbox">
+      Принимаю
+      <a href="#" class="appl-form__user-accept reset">пользовательское соглашение</a>
+    </span>
+  </label>
+  <!-- <div class="appl-form__overlay">
+
+  </div> -->
+  <div class="request-is-send modal-inactive">
+    <img src="@img/elephant-req-send-img.svg" alt="Cлон" aria-hidden="true" class="request-is-send__img">
+    <p class="request-is-send__text">
+      Спасибо, мы вам перезвоним!
+    </p>
+  </div>
+</form>

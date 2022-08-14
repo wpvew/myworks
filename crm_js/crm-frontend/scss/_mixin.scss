@@ -1,0 +1,64 @@
+
+@mixin fontClass($fontSize, $fontLh, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $fontLh;
+}
+
+@mixin resetIndent {
+  padding: 0;
+  margin: 0;
+}
+
+
+@mixin modalTitle {
+  @include resetIndent;
+  margin-bottom: 32px;
+  @include fontClass(18px, 1, 700);
+  color: $color-black;
+}
+
+@mixin modalConfirmBtn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 5px;
+  padding: 12px 28px;
+  width: 145px;
+  background-color: $color-primary;
+  @include fontClass(14px, 1, 600);
+  color: $color-white;
+  cursor: pointer;
+}
+
+@mixin modalNegation {
+  align-self: center;
+  @include fontClass(12px, 16px, 400);
+  color: $color-black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@mixin btnHover {
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+  &:hover, &.focus-visible {
+    background-color: $color-primary-light;
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: $color-primary-shade;
+    color: $color-white;
+  }
+}
+
+@mixin textHover($hoverColor) {
+  transition: color .3s ease-in-out;
+
+  &:hover, &.focus-visible {
+    color: $hoverColor;
+  }
+}

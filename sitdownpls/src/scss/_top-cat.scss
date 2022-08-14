@@ -1,0 +1,116 @@
+@import '_var.scss', '_mixin.scss';
+
+@mixin topCatGrid($firstElement, $secElement, $thirdElement, $fourElement, $fiveElement) {
+
+  $gridElements: (2: $secElement, 3: $thirdElement, '3n+1': $fourElement, 1: $firstElement, 5: $fiveElement);
+  @each $child, $childSize in $gridElements {
+    &:nth-child(#{$child}) {
+      grid-column: #{$childSize};
+    }
+  }
+}
+
+.section-top-cat {
+  padding: 70px 0;
+
+  &__grid-table {
+    display: grid;
+    grid-template-columns: minmax(296px,405px) repeat(2,minmax(133px,187px)) minmax(296px,405px);
+    grid-template-rows: minmax(511px, auto) minmax(405px, auto);
+    grid-auto-rows: minmax(405px, auto);
+    grid-auto-columns: minmax(296px,405px);
+    gap: 32px;
+  }
+
+  &__grid-element{
+    order: 100;
+    @include topCatGrid('1 / 3', '3 / -1', '1 / 2', '2 / 4', '4 / -1');
+    $gridElements: (1, 2, 3, 4, 5);
+    @each $child in $gridElements {
+      &:nth-child(#{$child}) {
+        order: $child;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-top-cat {
+    &__grid-table {
+      grid-template-columns: repeat(3, minmax(236px,296px));
+      grid-template-rows: repeat(2, minmax(511px, auto));
+      grid-auto-rows: minmax(511px, auto);
+    }
+
+    &__grid-element {
+      @include topCatGrid('1 / 3', '2 / 3', '3 / -1', '1 / 2', '3 / -1');
+      $gridElements: (1, 2, 3, 4, 5);
+      @each $child in $gridElements {
+        &:nth-child(#{$child}) {
+          @if ($child == 3) {
+            order: 2;
+          }
+          @if ($child == 2) {
+            order: 4;
+          }
+          @if ($child == 4) {
+            order: 3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .section-top-cat {
+    &__grid-table {
+      grid-template-columns: repeat(2, minmax(236px,428px));
+    }
+    &__grid-element {
+      @include topCatGrid('1 / -1', '2 / -1', '1 / 2', '1 / 2', '2 / -1');
+      $gridElements: (1, 2, 3, 4, 5);
+      @each $child in $gridElements {
+        &:nth-child(#{$child}) {
+          @if ($child == 3) {
+            order: 2;
+          }
+          @if ($child == 4) {
+            order: 4;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  .section-top-cat {
+    &__grid-table {
+      grid-template-columns: repeat(1, minmax(192px,576px));
+      grid-template-rows: minmax(410px, auto);
+      grid-auto-rows: minmax(410px, auto);
+    }
+
+    &__grid-element {
+      @include topCatGrid('1 / -1', '1 / -1', '1 / -1', '1 / -1', '1 / -1');
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .section-top-cat {
+    padding: 70px 0 78px;
+
+    &__grid-table {
+      grid-template-columns: repeat(2, minmax(140px,428px));
+      grid-template-rows: minmax(332px, auto) minmax(206px, auto);
+      grid-auto-rows: minmax(206px, auto);
+      column-gap: 16px;
+    }
+    &__grid-element {
+      @include topCatGrid('1 / -1', '2 / -1', '1 / 2', '1 / 2', '2 / -1');
+      position: relative;
+    }
+  }
+}

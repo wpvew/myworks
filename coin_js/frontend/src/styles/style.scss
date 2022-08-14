@@ -1,0 +1,7 @@
+@import '~normalize.css';
+// @import '../libs/choices.min.css';
+@import './var', './mixin';
+@import '_fonts.scss';
+@import '_common.scss';
+@import 'header.scss', 'page-login.scss', 'page-profile.scss', 'page-account-details.scss', 'page-currency.scss', 'page-banks-map.scss';
+@import 'skeleton.scss'

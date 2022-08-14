@@ -1,0 +1,131 @@
+@import '_var.scss', '_mixin.scss';
+
+.contact {
+
+  &__search-form {
+    display: flex;
+    margin-bottom: 32px;
+  }
+
+  &__input {
+    margin-right: 32px;
+    padding: 21px 19px 18px;
+    width: 624px;
+    border: none;
+    background-color: $color-grey-light;
+    border-radius: 10px;
+    transition: background-color .3s ease-in-out, box-shadow .2s ease-in-out;
+
+    &::placeholder {
+      @include fontClass(16px, 1, 400);
+      color: $color-grey;
+    }
+
+    &:hover {
+      background-color: $color-md-grey;
+    }
+
+    &.focus-visible {
+      background-color: $color-pink-light;
+      box-shadow: inset 0 0 0 1px $color-primary;
+    }
+  }
+
+  &__btn {
+    padding: 19px 37px;
+    background-color: $color-primary;
+    border-radius: 10px;
+    color: $color-white;
+    cursor: pointer;
+    @include fontClass(16px, 16px, 600);
+    @include hoverBtn($color-primary-light);
+  }
+}
+
+
+/* map */
+
+.yamap {
+  width: 100%;
+  height: 510px;
+}
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
+.ymaps-2-1-79-copyrights-pane .ymaps-2-1-79-copyright {
+  display: none;
+}
+
+
+
+.ymaps-2-1-79-balloon__content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.balloon {
+  // display: block;
+  padding: 30px;
+  max-width: 283px;
+
+  &__title {
+    @include resetIndent;
+    margin-bottom: 7px;
+    @include fontClass(16px, 1, 600);
+    color: $color-black;
+  }
+
+  &__address {
+    margin-bottom: 8px;
+    @include fontClass(14px, 1, 400);
+    color: $color-black;
+    font-style: normal;
+  }
+
+  &__phone-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    @include fontClass(14px, 1, 400);
+    color: $color-seconadary;
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+  }
+
+  &__work-time {
+    @include resetIndent;
+    margin-bottom: 8px;
+    padding: 12px 0;
+    border-top: 1px solid $color-grey-light;
+    border-bottom: 1px solid $color-grey-light;
+    @include fontClass(14px, 1, 400);
+    color: $color-black;
+  }
+
+  &__work-time-heading {
+    color: $color-grey;
+  }
+
+  &__info {
+    @include resetIndent;
+    @include fontClass(14px, 180%, 400);
+    color: $color-black;
+  }
+
+  &__info-heading {
+    color: $color-grey;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .yamap {
+    width: 100vw;
+    height: 500px;
+    transform: translateX(-12px);
+  }
+}

@@ -1,0 +1,578 @@
+@import '_var.scss', '_mixin.scss';
+
+.cardpage-section-card {
+  padding-bottom: 80px;
+}
+
+.cardpage {
+
+  &__grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 624px));
+    gap: 32px;
+  }
+
+  &__title, &__subtitle, &__price, &__desc-title, &__desc-text {
+    @include resetIndent;
+  }
+
+  // img-block
+
+  &__main-pic, &__mini-pic {
+    display: block;
+  }
+
+  &__main-img, &__mini-img {
+    width: 100%;
+  }
+
+  &__main-img {
+    margin-bottom: 14px;
+    cursor: pointer;
+  }
+
+  // heading
+
+  &__heading {
+    display: flex;
+    padding-top: 15px;
+
+    &-img {
+      display: none;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    @include fontClass(24px, 130%, 400);
+    color: $color-black;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    @include fontClass(14px, 1, 400);
+    color: $color-grey;
+  }
+
+  &__price {
+    margin-bottom: 21px;
+    @include fontClass(36px, 130%, 400);
+    color: $color-black;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__buy-btn {
+    padding: 19px 37px;
+    margin-bottom: 13px;
+    align-self: flex-start;
+    background-color: $color-primary;
+    border-radius: 10px;
+    color: $color-white;
+    cursor: pointer;
+    @include fontClass(16px, 16px, 600);
+    @include hoverBtn($color-primary-light);
+  }
+
+  &__add-in-basket-btn {
+    @include fontClass(17px, 130%, 400);
+    color: $color-primary;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover, &.focus-visible {
+      border-color: $color-primary;
+    }
+
+    &:active {
+      border-color: $color-primary-shade;
+      color: $color-primary-shade;
+    }
+
+  }
+
+  &__rate {
+    padding-left: 22px;
+    margin-bottom: 5px;
+    @include fontClass(16px, 1, 400);
+    color: $color-seconadary;
+    background-image: url('../img/star.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+
+  // desc
+
+  &__desc-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__desc-title {
+    margin-bottom: 8px;
+    @include fontClass(16px, 1, 600);
+    color: $color-black;
+  }
+
+  &__desc-text {
+    margin-bottom: 8px;
+    @include fontClass(14px, 180%, 400);
+    color: $color-black;
+  }
+
+  &__desc-pic {
+    margin-top: auto;
+  }
+
+  &__desc-img {
+    width: 100%;
+  }
+}
+
+// slider img mini
+.cardpage-mini-img {
+  position: relative;
+
+  &__swiper {
+    padding: 10px 0 10px 25px;
+    background-color: $color-grey-light;
+  }
+  &__slide {
+    width: unset;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+
+// content
+
+.cardpage__content {
+  padding-top: 6px;
+}
+
+.content-item {
+  display: grid;
+  grid-template-columns: minmax(125px, 328px) minmax(216px, auto);
+  margin-bottom: 11px;
+
+  &__grid-element {
+    display: flex;
+  }
+
+  &__title {
+    @include fontClass(14px, 1, 400);
+    color: $color-grey;
+    flex-shrink: 0;
+  }
+
+  &__desc {
+    @include fontClass(14px, 1, 400);
+    color: $color-black;
+    flex-shrink: 0;
+  }
+
+  &__dotted {
+    display: block;
+    align-self: flex-end;
+    margin: 0 5px;
+    overflow: hidden;
+    width: 100%;
+    height: 1em;
+    border-bottom: 2px dotted $color-grey;
+    transform: translateY(-2px);
+  }
+}
+
+
+// similar product
+
+.cardpage-section-similar-prod {
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 27px;
+    font-size: 24px;
+  }
+
+  @include sliderNavigation;
+}
+
+.similar-prod {
+  .swiper-slide {
+    height: unset;
+  }
+
+  .highrate-card {
+    box-sizing: border-box;
+
+    &__pic {
+      margin-bottom: 11px;
+    }
+  }
+}
+
+
+.modal-callback {
+  position: relative;
+  padding: 30px;
+  width: 624px;
+
+  &__title {
+    @include resetIndent;
+    margin-bottom: 8px;
+    @include fontClass(32px, 1, 400);
+    color: $color-black;
+  }
+
+  &__desc {
+    @include resetIndent;
+    margin-bottom: 30px;
+    max-width: 374px;
+    @include fontClass(14px, 19px, 400);
+    color: $color-black;
+  }
+}
+
+.modal-img {
+
+  max-width: 1280px;
+
+  &__pic {
+    display: block;
+    padding: 50px 108px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  .cardpage-mini-img {
+    &__swiper {
+      position: relative;
+      padding: 10px 0 10px 51px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  @include sliderNavigation;
+
+  &__nav-btn {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__btn-prev {
+    top: calc(50% - 16px);
+    left: 16px;
+  }
+
+  &__btn-next {
+    top: calc(50% - 16px);
+    right: 16px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .cardpage-section-card {
+    padding-bottom: 69px;
+  }
+
+  .cardpage {
+    &__grid-table {
+      grid-template-columns: minmax(0, 514px) minmax(0, 405px);
+    }
+
+    // img block
+    &__main-img {
+      margin-bottom: 17px;
+    }
+
+    // heading
+    &__heading {
+      padding-top: 18px;
+    }
+  }
+
+  // slider img mini
+  .cardpage-mini-img {
+    &__swiper {
+      padding: 10px 0 10px 10px;
+    }
+  }
+
+
+  .modal-img {
+
+    .cardpage-mini-img {
+
+      &__swiper {
+        display: block;
+        padding: 10px 0 10px 67px;
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .cardpage-section-card {
+    padding-bottom: 31px;
+  }
+
+  .cardpage {
+
+    &__grid-table {
+      & > * {
+        grid-column: 1 / -1;
+      }
+    }
+
+
+    // img-block
+    &__main-img {
+      margin: 0;
+    }
+
+
+    // heading
+    &__heading {
+      padding: 0;
+    }
+
+    &__heading-img {
+      display: block;
+      margin-right: 34px;
+    }
+
+    &__heading-info {
+      align-self: center;
+      transform: translateY(3px);
+    }
+
+
+    // desc
+
+    &__desc-block {
+      max-width: 515px;
+    }
+
+    &__desc-title {
+      margin-bottom: 10px;
+    }
+
+    &__desc-pic {
+      margin-top: 22px;
+    }
+  }
+
+  // mini img swiper
+
+  .cardpage-mini-img {
+    &__swiper {
+      display: none;
+    }
+  }
+
+  // content
+  .content-item {
+    grid-template-columns: minmax(0, 408px) minmax(216px, auto);
+  }
+
+  .modal-callback {
+    width: unset;
+  }
+
+
+  .modal-img {
+    max-width: 624px;
+
+   .cardpage-mini-img__swiper {
+     padding: 10px 0 10px 79px;
+   }
+
+    &__pic {
+      padding: 50px 21px;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  .cardpage{
+    &__heading-img {
+      display: none;
+    }
+  }
+
+  .content-item {
+    display: flex;
+
+    &__grid-element {
+      &:first-child {
+        width: 100%;
+      }
+      &:last-child {
+        display: block;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .cardpage-section-card {
+    padding-bottom: 49px;
+  }
+
+  .cardpage{
+    &__grid-table {
+      gap: 15px;
+    }
+
+
+    // img block
+
+    &__main-pic {
+      margin-bottom: 16px;
+    }
+
+    // heading
+    &__title {
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      margin-bottom: 18px;
+    }
+
+    &__price {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    &__btns, &__buy-btn {
+      width: 100%;
+    }
+
+    &__buy-btn {
+      margin-bottom: 12px;
+    }
+
+
+    // desc block
+
+    &__desc-block {
+      padding-top: 18px;
+    }
+
+    &__desc-title {
+      margin-bottom: 8px;
+    }
+
+
+    // content
+
+    &__content {
+      padding-top: 34px;
+    }
+  }
+
+
+  // mini img swiper
+  .cardpage-mini-img {
+    &__swiper {
+      display: block;
+    }
+  }
+
+
+  // contant
+  .content-item {
+    position: relative;
+    margin-bottom: 27px;
+
+    &__grid-element {
+      &:first-child {
+        position: absolute;
+        top: -15px;
+      }
+    }
+
+    &__title {
+      font-size: 10px;
+    }
+
+    &__dotted {
+      display: none;
+    }
+  }
+
+  .modal-callback {
+
+    &__title {
+      font-size: 21px;
+    }
+
+    &__desc {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .modal-img {
+    .cardpage-mini-img {
+
+      &__swiper {
+        padding: 10px 0 10px 60px;
+      }
+
+      &__slide {
+        align-self: center;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+
+
+
+  .cardpage-section-similar-prod {
+    padding-bottom: 118px;
+  }
+
+  .similar-prod .highrate-card {
+    padding-top: 34px;
+  }
+
+  .cardpage-section-similar-prod{
+    &__navigation {
+      top: unset;
+      bottom: -48px;
+      right: calc(50% - 38px);
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '_var.scss', '_mixin.scss';
+$qtyItems: 6;
+
+
+.section-special {
+  padding: 70px 0;
+
+  // &__title {
+  //   margin-bottom: 26px;
+  // }
+}
+
+.section-special {
+
+  &__grid-table{
+    display: flex;
+  }
+
+  &__grid-element {
+    width: 296px;
+    height: unset;
+
+    $qtyItems: 6; // qty elements
+    $itemCounter: $qtyItems - 1; //number of last element with big width;
+    $x: round(calc(($itemCounter - 2) / 3));
+
+    @for $i from 0 through $x {
+      $y: 2 + 3 * $i;
+      &:nth-child(#{$y}) {
+        width: 624px;
+      }
+    }
+
+    &:nth-child(6) {
+      .card-item {
+        &__heading {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__swiper {
+    overflow-x: clip;
+  }
+
+  @include sliderNavigation;
+
+}
+
+
+@media(max-width: 1024px) {
+  .section-special{
+    &__grid-table{
+      display: flex;
+      column-gap: 0;
+    }
+
+    &__grid-element {
+      height: unset;
+    }
+  }
+}
+
+
+@media(max-width: 600px) {
+  .section-special{
+    &__navigation {
+      top: unset;
+      bottom: -48px;
+      left: calc(50% - 39px);
+    }
+  }
+}
+
+@media(max-width: 420px) {
+  .section-special {
+    padding-bottom: 119px;
+  }
+}

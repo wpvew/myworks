@@ -1,0 +1,162 @@
+@import '_var.scss', '_mixin.scss';
+
+
+.cooperation {
+  margin-bottom: 38px;
+
+  &__text, &__title, &__subtitle {
+    @include resetIndent;
+  }
+
+  &__title {
+    margin-bottom: 38px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+    @include fontClass(24px, 1, 400);
+  }
+
+  &__text {
+    max-width: 842px;
+    @include fontClass(16px, 180%, 400);
+    color: $color-grey-shade;
+  }
+}
+
+.section-supply, .section-you-get, .section-benefits {
+  margin-bottom: 38px;
+}
+
+.section-you-get {
+  &__list {
+    max-width: 624px;
+  }
+
+  &__item {
+    padding-left: 37px;
+    margin-bottom: 12px;
+    background-position: left top;
+    background-repeat: no-repeat;
+    &:last-child {
+      margin: 0;
+    }
+
+    $svgImgs: (1: '../img/cooperation-network.svg', 2: '../img/cooperation-briefcase.svg', 3: '../img/cooperation-git-pull-request.svg');
+
+    @each $element, $img in $svgImgs {
+      &:nth-child(#{$element}) {
+        background-image: url($img);
+      }
+    }
+  }
+
+  &__text {
+    line-height: 150%;
+  }
+}
+
+
+.section-benefits {
+  &__item {
+    margin-bottom: 12px;
+    &:last-child {
+      margin: 0
+    }
+  }
+  &__item-title {
+    @include resetIndent;
+    margin-bottom: 12px;
+    @include fontClass(16px, 22px, 600);
+    color: $color-seconadary;
+  }
+}
+
+
+.section-warranty {
+  margin-bottom: 67px;
+
+  &__list {
+    margin: 0;
+    margin-bottom: 32px;
+    padding-left: 17px;
+    @include fontClass(16px, 180%, 400);
+    color: $color-seconadary;
+  }
+
+  &__item {
+    margin-bottom: 12px;
+    padding-left: 9px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    max-width: 814px;
+  }
+
+  &__banner {
+    padding:  25px 0 25px 110px;
+    max-width: 625px;
+    @include fontClass(24px, 150%, 400);
+    color: $color-black;
+    background-image: url('../img/cooperation-pencil.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .cooperation {
+    margin-bottom: 43px;
+    &__title {
+      margin-bottom: 35px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 178%;
+    }
+  }
+
+  .section-benefits, .section-supply, .section-warranty, .section-you-get {
+    margin-bottom: 35px;
+  }
+
+  .section-you-get {
+    &__text {
+      line-height: 150%;
+    }
+  }
+
+  .section-benefits {
+    &__title {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+  }
+
+  .section-warranty {
+    &__title {
+      margin-bottom: 14px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+
+    &__banner {
+      padding: 0px 0 25px 52px;
+      font-size: 16px;
+      background-image: url('../img/cooperation-pencil-420.png');
+      background-position: left 7px;
+    }
+  }
+}

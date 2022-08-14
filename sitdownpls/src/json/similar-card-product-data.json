@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Диван велюровый",
+    "model": "R-85",
+    "price": "34 990",
+    "rate": "4,5",
+    "img": "@img/card-item-r85.png",
+    "img420": "@img/card-item-r85-420.png"
+  },
+  {
+    "title": "Диван флоковый ",
+    "model": "H-58",
+    "price": "23 990",
+    "rate": "4,6",
+    "img": "@img/card-item-h58.png",
+    "img420": "@img/card-item-h58-420.png"
+  },
+  {
+    "title": "Диван велюровый",
+    "model": "S-44",
+    "price": "19 990",
+    "rate": "4,5",
+    "img": "@img/card-item-ss44.png",
+    "img420": "@img/card-item-s44-420.png"
+  },
+  {
+    "title": "Диван шиниловый",
+    "model": "V-43",
+    "price": "19 990",
+    "rate": "4,8",
+    "img": "@img/card-item-v43.png",
+    "img420": "@img/card-item-v43-420.png"
+  },
+  {
+    "title": "Диван шиниловый",
+    "model": "V-43",
+    "price": "19 990",
+    "rate": "4,8",
+    "img": "@img/card-item-v43.png",
+    "img420": "@img/card-item-v43-420.png"
+  }
+]

@@ -1,0 +1,214 @@
+@import '_var.scss', '_mixin.scss';
+
+$tableGrid: minmax(106px, 127px) minmax(241px, 314px) minmax(90px, 160px) minmax(90px, 158px) minmax(125px, 143px) minmax(104px, 189px);
+
+.section-clients {
+  padding: 40px 0;
+
+  &__title {
+    @include resetIndent;
+    margin-bottom: 26px;
+    @include fontClass(24px, 33px, 700);
+    color: $color-black;
+  }
+}
+
+.table-clients{
+  position: relative;
+  margin-bottom: 40px;
+  overflow-x: auto;
+}
+
+.clients-header {
+  display: grid;
+  grid-template-columns: $tableGrid;
+  column-gap: 15px;
+  padding-left: 20px;
+  padding-bottom: 8px;
+  min-width: 856px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    @include fontClass(12px, 10px, 400);
+    color: $color-text-grey;
+    cursor: default;
+  }
+
+  &__title-wrap {
+    position: relative;
+    @include textHover($color-black);
+
+    &.active {
+      color: $color-primary;
+    }
+  }
+
+
+  &__btn-sort.sort-up ~ &__title-wrap, &__btn-sort.sort-down ~ &__title-wrap {
+    color: $color-primary;
+  }
+
+  &__btn-sort {
+    position: absolute;
+    left: -5px;
+    right: -15px;
+    bottom: -10px;
+    top: -8px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.add-clients-btn {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 13px 26px;
+  border: 2px solid $color-primary;
+  @include fontClass(14px, 1, 600);
+  color: $color-primary;
+  cursor: pointer;
+
+  @include btnHover;
+
+  svg {
+    margin-right: 10px;
+    width: 22px;
+    height: 16px;
+    fill: currentColor;
+  }
+}
+
+
+.table-data {
+  @include fontClass(14px, 19px, 400);
+  color: $color-black;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: $tableGrid;
+  column-gap: 15px;
+  padding-left: 20px;
+  align-items: center;
+  min-width: 856px;
+  height: 60px;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-grey;
+
+  &:last-of-type {
+    margin: 0;
+    border: none;
+  }
+}
+
+
+.contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-right: 7px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__marker {
+    color: #b49afc;
+    transition: color .3s ease-in-out;
+
+    &:hover, &.focus-visible, &[aria-describedby] {
+      color: $color-primary-shade;
+    }
+  }
+
+  &__show-more-btn {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    @include fontClass(8px, 10px, 600);
+    color: $color-black;
+    border: 1px solid $color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:hover, &.focus-visible {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+
+.client-action {
+  display: flex;
+  align-items: center;
+
+  &__change-wrap {
+    margin-right: 30px;
+  }
+
+  &__change {
+    display: flex;
+    cursor: pointer;
+    @include textHover($color-primary);
+  }
+
+  &__delete {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include textHover($color-red);
+
+    .svg-close-contact {
+      margin-right: 2px;
+      fill: $color-red;
+    }
+  }
+}
+
+.time {
+  margin-left: 10px;
+  color: $color-text-grey;
+}
+
+
+
+.clients-header__btn-sort.sort-up + .svg-sort-arrow{
+  transform: rotate(0);
+  fill: $color-primary
+}
+
+
+@media (max-width: 1130px) {
+  .create-date {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .change-date {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .time {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .client-action {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__change-wrap {
+      margin-bottom: 5px;
+    }
+  }
+
+}

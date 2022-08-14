@@ -1,0 +1,104 @@
+@import 'var', 'mixin';
+
+.page-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 85px 50px 40px;
+  max-width: 500px;
+  background-color: #f3f4f6;
+  border-radius: 50px;
+
+  &__title {
+    align-self: center;
+    @include resetIndent;
+    margin-bottom: 35px;
+    @include fontClass(34px, 1, 700);
+    color: $color-black;
+  }
+
+  &__input-group {
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__input-title {
+    @include resetIndent;
+    margin-right: 18px;
+    font-family: $ubuntu;
+    @include fontClass(16px, 1, 500);
+    color: $color-black;
+  }
+
+  &__input {
+    padding: 10px 16px;
+    width: 300px;
+    height: 44px;
+    border: 1px solid $color-grey-light;
+    border-radius: 7px;
+  }
+
+  &__btn {
+    @include coinBtn;
+    padding: 14px 21px;
+    font-family: $ubuntu;
+    @include fontClass(14px, 1, 500);
+    background-color: $color-primary;
+    color: $color-white;
+    align-self: center;
+  }
+}
+
+@media(max-width: 560px) {
+  .page-login {
+    align-items: initial;
+    height: auto;
+  }
+
+  .signin-form {
+    padding: 25px 55px 25px 30px;
+    max-width: 500px;
+    border-radius: 25px;
+
+    &__input {
+      width: 200px;
+    }
+  }
+}
+
+@media(max-width: 420px) {
+  .signin-form {
+    &__title {
+      align-self: flex-start;
+      font-size: 24px;
+    }
+
+    &__input-group {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+
+    &__input-title {
+      margin-bottom: 10px;
+    }
+
+    &__input {
+      width: 100%;
+    }
+  }
+}

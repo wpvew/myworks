@@ -1,0 +1,58 @@
+[
+  {
+    "img": "@img/card-item-x24.png",
+    "img1024": "@img/card-item-x24-1024.png",
+    "title": "Кресло велюровое",
+    "model": "“X-24”",
+    "current-price": "15 990",
+    "first-price": "24 990",
+    "sale-amount": "9 000"
+  },
+  {
+    "img": "@img/card-item-z44.png",
+    "img1024": "@img/card-item-z44-1024.png",
+    "title": "Диван тканевый",
+    "model": "“Z-44”",
+    "addImg": "@img/card-item-add-z44.png",
+    "current-price": "22 990",
+    "first-price": "32 990",
+    "sale-amount": "10 000"
+  },
+  {
+    "img": "@img/card-item-clock.png",
+    "img1024": "@img/card-item-clock-1024.png",
+    "title": "Будильник",
+    "model": "“Quartz-23”",
+    "current-price": "1 290",
+    "first-price": "1 890",
+    "sale-amount": "600"
+  },
+  {
+    "img": "@img/card-item-omd.png",
+    "img1024": "@img/card-item-omd-1024.png",
+    "title": "Мини-скульптура",
+    "model": "“Oh my deer”",
+    "current-price": "690",
+    "first-price": "990",
+    "sale-amount": "300"
+  },
+  {
+    "img": "@img/card-item-z85.png",
+    "img1024": "@img/card-item-z85-1024.png",
+    "title": "Диван вел-флок",
+    "model": "“Z-85”",
+    "addImg": "@img/card-item-add-z85.png",
+    "current-price": "22 990",
+    "first-price": "32 990",
+    "sale-amount": "10 000"
+  },
+  {
+    "img": "@img/card-item-h18.png",
+    "img1024": "@img/card-item-h18-1024.png",
+    "title": "Термометр + гидрометр",
+    "model": "“H-18”",
+    "current-price": "1 390",
+    "first-price": "2 090",
+    "sale-amount": "700"
+  }
+]

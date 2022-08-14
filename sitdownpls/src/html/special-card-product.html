@@ -1,0 +1,23 @@
+<li class="section-special__grid-element swiper-slide section-special__slide">
+  <article class="card-item">
+    <picture class="card-item__pic">
+      <source srcset="@@img1024" media="(max-width: 1350px)">
+      <img class="card-item__img" src="@@img" alt="@@title @@model" aria-hidden="true">
+      <!-- <img class="card-item__img lazyload" data-src="@@img" alt="@@title @@model" aria-hidden="true"> -->
+    </picture>
+    <h3 class="card-item__heading">
+      <span class="card-item__title">@@title</span>
+      <span class="card-item__model">@@model</span>
+    </h3>
+    <div class="card-item__price">
+      <span class="current-price">@@current-price руб</span>
+      <s class="first-price">@@first-price руб</s>
+      <span class="sale-amount"> - @@sale-amount</span>
+    </div>
+    <a href="cardpage.html" class="card-item__btn reset">Купить</a>
+    @@if (context.addImg){
+      <img class="card-item__add-img" src="@@addImg" alt="Механизм дивана" aria-hidden="true">
+    }
+  </article>
+</li>
+

@@ -1,0 +1,336 @@
+@import '_var.scss', '_mixin.scss';
+
+.section-appl {
+  padding-bottom: 70px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-block {
+    width: calc(624 / 1280 * 100%);
+  }
+  &__right-block {
+    width: calc(624 / 1280 * 100%);
+  }
+
+  &__img {
+    transform: translateY(-18px);
+    width: 100%;
+  }
+
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @include resetIndent;
+    margin-bottom: 16px;
+    @include fontClass(14px, 18px, 400);
+    color: $color-grey-shade;
+  }
+
+  &__marker {
+    color: $color-seconadary;
+    transform: translateY(2px);
+    transition: color .3s ease-in-out;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      border-radius: 50%;
+      transition: background-color .3s ease-in-out;
+    }
+
+    &:hover, &.focus-visible, &:active {
+      color: $color-white;
+      svg {
+        background-color: $color-seconadary;
+      }
+    }
+  }
+}
+.tippy-box {
+  border-radius: 0;
+}
+
+.tippy-content {
+  padding: 10px;
+  text-align: center;
+  @include fontClass(14px, 14px, 400);
+}
+
+
+.appl-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__input-group {
+    position: relative;
+  }
+
+  &__input {
+    margin-bottom: 30px;
+    padding: 21px 19px 18px;
+    width: 100%;
+    border: none;
+    background-color: $color-grey-light;
+    border-radius: 10px;
+    transition: background-color .3s ease-in-out, box-shadow .2s ease-in-out;
+
+    &::placeholder {
+      @include fontClass(16px, 1, 400);
+      color: $color-grey;
+    }
+
+    &:hover {
+      background-color: $color-md-grey;
+    }
+
+    &.focus-visible {
+      background-color: $color-pink-light;
+      box-shadow: inset 0 0 0 1px $color-primary;
+    }
+  }
+
+  &__btn {
+    padding: 19px 37px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+    background-color: $color-primary;
+    border-radius: 10px;
+    color: $color-white;
+    cursor: pointer;
+    @include fontClass(16px, 16px, 600);
+    @include hoverBtn($color-primary-light);
+  }
+
+  &__check-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__title-checkbox {
+    @include fontClass(14px, 19px, 400);
+    color: $color-black;
+  }
+
+  &__user-accept {
+    color: $color-primary;
+    text-decoration: revert;
+    @include hoverText($color-primary-light, $color-pink-violet, $color-primary-shade, $color-primary-shade)
+  }
+
+  &__base-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+
+    &:checked + .appl-form__custom-checkbox {
+      background-color: $color-primary;
+    }
+
+    &.focus-visible + .appl-form__custom-checkbox {
+      outline: 2px solid $color-primary;
+    }
+  }
+
+  &__custom-checkbox {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid $color-primary;
+    border-radius: 2px;
+    // background-color: $color-primary;
+    transition: background-color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url('../img/accept.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+
+  &__base-checkbox:checked + .appl-form__custom-checkbox {
+    background-color: $color-primary;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.is-invalid {
+  box-shadow: inset 0 0 0 1px $color-red-input;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -18px;
+  left: 19px;
+  @include fontClass(12px, 16px, 400);
+}
+
+.just-validate-success-field {
+  box-shadow: inset 0 0 0 1px $color-green-input;
+}
+
+.appl-form__check-label .just-validate-error-label {
+  top: 20px;
+  left: 0;
+}
+
+
+
+.request-is-send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 30px;
+  width: 624px;
+  height: 421px;
+  background-color: $color-white;
+
+  &__img {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin: 0;
+    @include fontClass(32px, 1, 400);
+    color: $color-black;
+  }
+}
+
+
+@media(max-width: 1290px) {
+  .section-appl {
+    &__img {
+      transform: unset;
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  .section-appl {
+    &__left-block {
+      width: calc(405 / 952 * 100%);
+    }
+    &__right-block {
+      width: calc(514 / 952 * 100%);
+    }
+
+    &__img {
+      transform: translateY(36px);
+    }
+
+    &__text {
+      line-height: 19px;
+    }
+  }
+}
+@media(max-width: 960px) {
+  .section-appl {
+    &__left-block {
+      width: calc(428 / 888 * 100%);
+    }
+    &__right-block {
+      width: calc(428 / 888 * 100%);
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .section-appl {
+    padding-bottom: 55px;
+
+    &__left-block {
+      width: calc(405 / 624 * 100%);
+    }
+    &__right-block {
+      width: calc(187 / 624 * 100%);
+    }
+
+    &__img {
+      transform: translateY(-30px);
+    }
+  }
+
+  .request-is-send {
+    width: 100%;
+  }
+}
+@media(max-width: 600px) {
+  .section-appl {
+    &__left-block {
+      width: 100%;
+    }
+    &__right-block {
+      display: none;
+    }
+  }
+
+  .request-is-send {
+
+    &__text {
+      font-size: 22px;
+    }
+  }
+}
+
+
+@media(max-width: 420px) {
+  .section-appl {
+    padding-bottom: 68px;
+
+    &__title {
+      margin-bottom: 8px;
+    }
+
+  }
+
+  .appl-form {
+    &__btn {
+      margin-bottom: 11px;
+    }
+
+    &__title-checkbox {
+      font-size: 12px;
+    }
+
+    &__custom-checkbox {
+      margin-right: 6px;
+    }
+  }
+
+
+  .request-is-send {
+
+    padding: 15px;
+
+    &__text {
+      font-size: 19px;
+    }
+  }
+}

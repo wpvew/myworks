@@ -1,0 +1,25 @@
+@import '_var.scss';
+
+@mixin fontClass($size, $lh, $weight) {
+  font: {
+    size: $size;
+    weight: $weight;
+  };
+  line-height: $lh;
+}
+
+@mixin resetIndent {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  list-style: none;
+}
+
+@mixin coinBtn {
+  @include resetIndent;
+  padding: 16px 24px;
+  border-radius: 7px;
+  cursor: pointer;
+}

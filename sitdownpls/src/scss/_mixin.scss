@@ -1,0 +1,194 @@
+@import '_var.scss';
+
+@mixin fontClass($fontSize, $fontLineHeaight, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $fontLineHeaight;
+}
+
+@mixin resetIndent {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin headerGreyBackground {
+  content: '';
+  position: absolute;
+  top: 0;
+
+  @media (max-width: 1024px) {
+    top: 58px;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  @media (max-width: 420px) {
+    display: block;
+    top: 0;
+  }
+
+  left: 0;
+  right: 0;
+  // width: 100vw;
+  height: 50px;
+  background-color: $color-grey-light;
+  z-index: -2;
+}
+
+
+@mixin hoverText($hoverColor, $focusBgColor, $activeColor, $focusColor) {
+  position: relative;
+  transition: color .3s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    right: -3px;
+    left: -3px;
+    background-color: $focusBgColor;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &:hover {
+    color: $hoverColor;
+  }
+
+  &.focus-visible {
+    @if ($focusColor != 0) {
+      color: $focusColor;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    color: $activeColor;
+  }
+
+  &.focus-visible:hover::before {
+    opacity: 0;
+  }
+
+  &.focus-visible:hover {
+    color: $hoverColor;
+  }
+  &.focus-visible:active {
+    color: $activeColor;
+  }
+}
+
+@mixin hoverBtn($hoverBgColor) {
+
+  transition: background-color .3s ease-in-out, box-shadow .2s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+
+  &:hover{
+    background-color: $hoverBgColor;
+    color: $color-white;
+  }
+
+  &.focus-visible {
+    color: $color-white;
+    background-color: $color-primary-light;
+    @if ($hoverBgColor != $color-primary) {
+      box-shadow: inset 0 0 0 2px $color-primary-shade;
+    }
+  }
+
+  &:active {
+    color: $color-white;
+    @if ($hoverBgColor == $color-primary) {
+      border-color: $color-primary-shade;
+    }
+    background-color: $color-primary-shade;
+  }
+}
+
+
+
+@mixin emptyBtn {
+  padding: 17px 34px;
+  display: inline-block;
+  @include fontClass(16px, 1, 600);
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include hoverBtn($color-primary);
+}
+
+
+@mixin sliderNavigation {
+  &__swiper {
+    position: relative;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: -58px;
+    right: 0;
+  }
+
+  &__nav-btn {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, border-color .2s ease-in-out, color .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      right: 11px;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      z-index: 10;
+    }
+
+    &:hover{
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
+    &.focus-visible {
+      background-color: $color-primary-light;
+      border-color: $color-primary-shade;
+      color: $color-white;
+    }
+
+    &:active {
+      background-color: $color-primary-shade;
+      border-color: $color-primary-shade;
+    }
+
+    &.swiper-button-disabled {
+      color: $color-grey;
+      background-color: $color-white;
+      border-color: $color-grey;
+      cursor: auto;
+    }
+  }
+
+  &__btn-prev {
+    margin-right: 13px;
+    transform: rotate(135deg);
+  }
+  &__btn-next {
+    transform: rotate(-45deg);
+  }
+}
