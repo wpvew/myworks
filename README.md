@@ -9,28 +9,29 @@ My biggest SSR, SPA mobile responsive React and typescript project for viewing a
 **To use, you need an account on reddit and login**
 Implemented many functions that are performed on reddit, some of them: infinite scroll, search through all reddit posts, sorting posts list, opening posts, saving, hiding, like and dislike, commenting, etc.
 >https://mirror-redd-react.herokuapp.com/
-Development watch package - `npm run dev`; 
-Build package - `npm run build`
-Client will start in `http://localhost:3000`
+>Development watch package - `npm run dev`; 
+>Build package - `npm run build`
+>Client will start in `http://localhost:3000`
 
 **Used tools: HTML, CSS, JS, React, TypeScript, Redux, Redux-Thunk, SSR, WebPack, OAuth2 reddit, eslint**
 #### STARWARS
 This is a simple project in react with typescript implements ajax request
 >Development watch package - `npm start`; 
-Build package - `npm build`
+>Build package - `npm build`
 ## Vanilla JS projects
 #### CRM
->To start the server, go to the folder with the repository and run the command `node index`. Server will start in `http://localhost:3000`.
+>To start the server, go to the folder with the repository and run the command `node index`.
+>Server will start in `http://localhost:3000`.
 
 A one-page project almost pure in js. Maintaining a database of clients and their contacts. With the functions of adding, deleting, adjusting them. As well as searching and sorting by list.
 **Used tools: HTML, SCSS, JS modules, GULP**
 
 #### COIN
 >To start the server, go to the folder with the repository and run the command - `npm start`.
-Development package - `npm run dev`; 
-Build package - `npm run build`
-Server will start in `http://localhost:3000`.
-Client will start in `http://localhost:4200`
+>Development package - `npm run dev`; 
+>Build package - `npm run build`
+>Server will start in `http://localhost:3000`.
+>Client will start in `http://localhost:4200`
 
 - Page authorization:
 Login: admin
