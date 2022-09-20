@@ -1,0 +1,56 @@
+.btnLoadingMore {
+  padding: 10px 20px;
+  border: 1px solid var(--black);
+  align-self: center;
+}
+
+.cardsList {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  max-height: calc(100vh - 280px);
+}
+
+.cardsList.modalActive {
+  overflow: hidden;
+}
+
+@media all and (min-width: 1024px) {
+  .cardsList {
+    padding: 40px 20px;
+  }
+}
+
+.testScroll {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.simplebar-track.simplebar-vertical {
+	background-color: #d9d9d9;
+	width: 5px;
+}
+
+.simplebar-content-wrapper {
+	padding-right: 15px;
+}
+
+.simplebar-scrollbar::before {
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background-color: #2871c5;
+	border-radius: 0;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+	top: 0;
+	bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+	opacity: 1;
+}

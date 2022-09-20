@@ -1,0 +1,118 @@
+.sortBlock {
+  display: flex;
+  align-items: center;
+  /* padding: 11px 20px; */
+  padding: 11px 0;
+  order: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border-radius: 7px;
+  background-color: var(--white);
+}
+
+.sort {
+  position: relative;
+  width: 100%;
+}
+
+.sortPostsList {
+  padding: 0 20px;
+}
+
+.sortButton {
+  display: flex;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.sortButton::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+}
+
+.sortButton > svg {
+  margin-right: 5px;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  background-color: var(--white);
+  z-index: 100;
+}
+
+.dropdownArrow {
+  position: absolute;
+  right: 20px;
+  top: 3px;
+  display: inline-block;
+  padding: 3px;
+  border: solid var(--orange);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: transform .3s ease-in-out;
+}
+
+.dropdownArrow.active {
+  transform: rotate(-135deg) translateY(-1px);
+  -webkit-transform: rotate(-135deg) translateY(-1px);;
+}
+
+.menuItemsList {
+  padding: 0 20px;
+}
+
+@media all and (min-width: 1024px) {
+  .sortBlock {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .sortButton::after {
+    top: -10px;
+    bottom: -10px;
+    right: -30px;
+    left: -10px;
+  }
+
+  .dropdown {
+    width: unset;
+    top: 10px;
+  }
+
+  .dropdownArrow {
+    right: -20px;
+  }
+}
+
+
+@media all and (max-width: 660px) {
+  .sortBlock {
+    margin-right: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    order: 4;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .sortBlock {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    margin: 0;
+  }
+  .dropdown {
+    top: 11px;
+  }
+}

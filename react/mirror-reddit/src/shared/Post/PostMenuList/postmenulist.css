@@ -1,0 +1,56 @@
+.menuItemsList {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  justify-content: flex-start;
+}
+
+.menuItem {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.menuItem:last-child {
+  margin: 0;
+}
+
+.menuItem > span, .menuItem path {
+  transition: color .3s ease-in-out, fill .3s ease-in-out;
+}
+.menuItem:hover > span, .menuItem:hover path {
+  color: var(--orange);
+  fill: var(--orange)
+}
+.menuItem[disabled]:hover > span, .menuItem[disabled]:hover path {
+  color: var(--grey99);
+  fill: var(--grey99)
+}
+
+.menuItem[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.menuItem[disabled]::after {
+  background-color: var(--white);
+}
+
+.menuItem > svg {
+  margin-right: 5px;
+}
+
+.menuItems:last-child {
+  margin: 0;
+}
+
+@media all and (min-width: 420px) {
+  .menuItemsList {
+    justify-content: flex-start;
+  }
+  .menuItem {
+    margin-right: 25px;
+    margin-bottom: 10px;
+  }
+}

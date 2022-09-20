@@ -1,0 +1,23 @@
+.publishedLabel {
+  display: none;
+}
+
+.createdAt, .createdAt span {
+  color: var(--grey99);
+}
+
+.createdAt {
+  padding-left: 27px;
+}
+
+@media all and (min-width: 660px) {
+  .createdAt {
+    padding: 0;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .publishedLabel {
+    display: inline;
+  }
+}

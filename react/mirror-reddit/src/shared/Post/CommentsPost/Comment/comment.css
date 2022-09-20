@@ -1,0 +1,96 @@
+.commentItem {
+  position: relative;
+  padding: 0 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.header > * {
+  margin-right: 5px;
+}
+
+.header > *:last-child {
+  margin: 0;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.actionsBtn {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.actionsBtn:last-child {
+  /* margin: 0; */
+}
+
+.actionsBtn > svg {
+  margin-right: 5px;
+}
+
+.leftBar {
+  position: absolute;
+  left: 0;
+  top: -13px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.followLine {
+  height: calc(100% - 30px);
+  width: 2px;
+  background-color: var(--greyD9);
+}
+
+@media all and (min-width: 660px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .actionsBtn {
+    margin: 0;
+    margin-right: 27px;
+  }
+}
+
+@media all and (min-width: 420px) {
+  .header {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .actions {
+    flex-wrap: nowrap;
+  }
+}
+
+.commentKarma {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.commentKarma > * + * {
+  padding: 2px 0 0;
+}

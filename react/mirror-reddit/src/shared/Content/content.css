@@ -1,0 +1,66 @@
+.postMenu {
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--black);
+}
+.postMenuList {
+  display: flex;
+  justify-content: space-between;
+}
+.postMenuItem {
+  position: relative;
+  margin-right: 10px;
+  font-size: 16px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.postMenuItem::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -22px;
+  left: -5px;
+  right: -5px;
+  border-bottom: 2px solid transparent;
+  transition: border-color .3s ease-in-out;
+}
+
+.postMenuItem:hover {
+  transition: color .3s ease-in-out;
+}
+
+.postMenuItem:hover::after, .postMenuItem:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.postMenuItem.tabActive {
+  color: var(--orange);
+}
+
+.postMenuItem.tabActive::after {
+  border-color: var(--orange);
+}
+
+.postMenuItem[disabled] {
+  cursor: default;
+}
+
+.postMenuItem[disabled] > span, .postMenuItem[disabled]:hover > span{
+  color: var(--grey99);
+}
+
+.postMenuItem[disabled]:hover::after {
+  opacity: 0;
+}
+
+@media all and (min-width: 1024px) {
+  .content {
+    /* background-color: var(--white); */
+    border-radius: 7px 7px 0 0;
+  }
+
+  .postMenuItem {
+    font-size: 20px;
+  }
+}
