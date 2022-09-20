@@ -3,7 +3,7 @@
 
 ## REACT
 #### **MIRROR REDDIT**
-###### https://mirror-redd-react.herokuapp.com/
+**https://mirror-redd-react.herokuapp.com/**
 My biggest SSR, SPA mobile responsive React and typescript project for viewing and managment posts from reddit.com.\
 **To use, you need an account on reddit and login.**\
 Implemented many functions that are performed on reddit, some of them: infinite scroll, search through all reddit posts, sorting posts list, opening posts, saving, hiding, like and dislike, commenting, etc.
@@ -39,12 +39,12 @@ This is a SPA project on pure JS of an online bank that implements: creating new
 **Used tools: HTML, SCSS, WebPack, eslint, jest, e2e.**
 ## Layout projects
 #### **BLANCHARD**
-###### http://blanchard.sbip.tmweb.ru/
+**http://blanchard.sbip.tmweb.ru/**
 That is my first layout single page project. This is a simple project with high-quality adaptive layout, as well as a form submission function with a minimum of js and even without preprocessors as SASS. Here I used different plugins to create an accordion, slider, dropdown, tooltip, customization of elements etc.\
 **Used tools: HTML, CSS.**
 
 #### **SITDOWNPLEASE**
-###### http://sitdownplease.sbip.tmweb.ru/
+**http://sitdownplease.sbip.tmweb.ru/**
 This is already an adaptive and crossbrowser multi-page site, but still not very functional. Here I used the layout and all the development tools to the fullest. The whole header is made on grids without duplicating code, you can see the permutation of elements with changing the screen size up to 320 pixels. JS at that time had not yet been studied, I used it intuitively (thanks to Google).\
 The functional part is made on the "каталог" page, checkboxes and rageline work here
 Active pages: "Каталог", "Контакты", any button "купить", in the footer "Поставщикам".\
