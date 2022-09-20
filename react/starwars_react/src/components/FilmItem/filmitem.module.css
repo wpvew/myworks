@@ -1,0 +1,38 @@
+.filmCard {
+  transition: box-shadow .3s ease-in-out;
+}
+
+.filmCard:hover {
+  box-shadow: 0 0 10px 0px black;
+}
+
+.filmImg {
+  width: 100%;
+}
+
+.filmInfo {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.filmHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filmTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.filmEpisode {
+  font-size: 16px;
+}
+
+.filmDesc {
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+}

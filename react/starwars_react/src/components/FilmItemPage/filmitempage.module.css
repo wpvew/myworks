@@ -1,0 +1,33 @@
+.filmTitle {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 34px;
+}
+
+.filmDesc {
+  font-size: 16px;
+}
+
+.filmBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.filmInfo {
+  max-width: 800px;
+}
+
+.filmImg {
+  object-fit: contain;
+}
+
+.btnBack {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+.btnBack:hover {
+  text-decoration: underline;
+}
