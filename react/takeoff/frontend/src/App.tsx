@@ -40,6 +40,7 @@ const AppWrap = () => {
                   : <Navigate to='/auth' replace />
               }
             />
+            <Route path='*' element={!token ? <Navigate to='/auth' replace />: <Navigate to='/contacts' replace />} />
           </Routes>
         </Content>
       </Layout>
