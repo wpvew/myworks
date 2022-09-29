@@ -18,6 +18,7 @@ import { saveToken } from './store/token/action';
 import thunk from 'redux-thunk';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+// const store = createStore();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function AppWrap() {

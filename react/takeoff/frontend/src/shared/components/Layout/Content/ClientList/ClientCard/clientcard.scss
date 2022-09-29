@@ -1,0 +1,69 @@
+@import '../../../../../../var.global.scss', '../../../../../../mixin.global.scss';
+
+.client {
+  display: grid;
+  grid-template-columns: $grid-table;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 2px;
+  background-color: $white;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.clientInfo {
+  &[client-data="contacts"] {
+    display: flex;
+    flex-direction: column;
+  }
+  &[client-data="id"] {
+    color: $greyB0;
+  }
+}
+
+.clientContact {
+  display: grid;
+  grid-template-columns: minmax(70px, 100px) minmax(180px, 300px);
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.btns {
+  > * {
+    margin-right: 20px;
+    @include btnLinkHover;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.btnDelete {
+  &:hover {
+    color: $red;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .client {
+    padding: 20px 10px;
+  }
+
+  .btns {
+    > * {
+      margin: 0;
+      margin-bottom: 5px;
+      display: block;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

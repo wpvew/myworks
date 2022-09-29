@@ -8,7 +8,6 @@ import { updateModalStatus } from '../../../store/modalStatus/action';
 import { TPostsList } from '../../../store/postsList/reducer';
 import { TRootState } from '../../../store/storeRedux';
 import { Card } from './Card/Card';
-import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
 import styles from './cardslist.css';
 
 export interface IPostsList {
