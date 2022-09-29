@@ -5,7 +5,7 @@ Please see project descriptions below.**
 ## REACT
 ### **MIRROR REDDIT**
 **https://mirror-redd-react.herokuapp.com/**  
-My biggest SSR, SPA mobile responsive React and typescript project for viewing and managment posts from reddit.com.\
+My biggest SSR mobile responsive React and typescript project for viewing and managment posts from reddit.com.\
 ***To use, you need an account on reddit and login.***\
 Implemented many functions that are performed on reddit, some of them: infinite scroll, search through all reddit posts, sorting posts list, opening posts, saving, hiding, like and dislike, commenting, etc.
 >Development watch package - `npm run dev`;\
