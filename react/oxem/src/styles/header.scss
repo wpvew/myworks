@@ -1,0 +1,41 @@
+@import './var.scss', './mixin.scss';
+
+.header {
+  padding-top: 210px;
+  margin-bottom: 30px;
+}
+
+.title {
+  @include reset;
+  max-width: 753px;
+  @include fontClass(54px, 0.9, 900);
+  color: $black;
+}
+
+@media all and (max-width: 1024px) {
+  .header {
+    padding-top: 100px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .header {
+    padding-top: 65px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .header {
+    padding-top: 40px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+}

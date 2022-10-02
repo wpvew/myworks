@@ -1,0 +1,45 @@
+@import './var.scss', './mixin.scss';
+@import './content.scss';
+
+.formGroup {
+  @include formGroup;
+}
+
+.formGroupTitle {
+  @include formGroupTitle;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+%key-shared {
+  position: absolute;
+  right: 25px;
+}
+
+.key {
+  @extend %key-shared;
+  bottom: 20px;
+  @include fontClass(30px, 1, 900);
+}
+
+.keyPer {
+  @extend %key-shared;
+  bottom: 25px;
+  @include fontClass(20px, 1, 900);
+}
+
+@media all and (max-width: 1024px) {
+  .formGroup {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .key {
+    font-size: 22px;
+    bottom: 23px;
+  }
+}

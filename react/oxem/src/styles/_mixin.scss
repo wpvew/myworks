@@ -1,0 +1,35 @@
+@import '_var.scss';
+
+@mixin fontClass($fontSize, $fontLineHeaight, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $fontLineHeaight;
+}
+
+@mixin resetIndent {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin reset {
+  @include resetIndent;
+  background-color: transparent;
+  list-style-type: none;
+  text-decoration: none;
+  border: none;
+}
+
+@mixin hoverBtn($hoverBgColor, $activeBgColor) {
+
+  transition: background-color .3s ease-in-out;
+
+  &:hover{
+    background-color: $hoverBgColor;
+  }
+
+  &:active {
+    background-color: $activeBgColor;
+  }
+}

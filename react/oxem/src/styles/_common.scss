@@ -1,0 +1,38 @@
+@import 'fonts.scss';
+@import './var.scss', '_mixin.scss';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  @include resetIndent;
+  font-family: Nekst, Arial, Helvetica, sans-serif;
+  color: $gray57;
+}
+
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

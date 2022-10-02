@@ -1,0 +1,133 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import './var.scss', './mixin.scss';
+
+@mixin formGroup {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@mixin formGroupTitle {
+  margin-bottom: 25px;
+  font-family: Gilroy;
+  @include fontClass(16px, 1, 400);
+  color: $gray57;
+
+  @media all and (max-width: 560px) {
+    margin-bottom: 10px;
+  }
+
+  @media all and (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.main {
+  padding-bottom: 50px;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 45px;
+}
+
+.input {
+  padding: 16px 24px;
+  width: 100%;
+  font-family: Nekst;
+  @include fontClass(30px, 1, 900);
+  color: $gray57;
+  background-color: $grayF3;
+  border-radius: 16px;
+  border: 2px solid $grayF3;
+
+  &:focus {
+    background-color: $white;
+    // outline: 2px solid $grayF3;
+  }
+
+  &:disabled {
+    color: $gray57;
+    background-color: $grayF3;
+  }
+}
+
+.btn {
+  @include reset;
+  @include fontClass(30px, 1, 900);
+  padding: 18px 90px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: Nekst;
+  color: $white;
+  background-color: $orange;
+  border-radius: 40px;
+
+  @include hoverBtn($black, $gray57)
+}
+
+.keyPercent {
+  position: absolute;
+  padding: 15px 5px 15px 17px;
+  width: 70px;
+  right: 7px;
+  bottom: 8px;
+  @include fontClass(20px, 1, 900);
+  font-family: Nekst;
+  background-color: #EBEBEC;
+  border-radius: 16px;
+  border: none;
+  color: $gray57;
+}
+
+@media all and (max-width: 1024px) {
+  .form {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .form {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .form {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .input {
+    padding: 20px;
+    font-size: 22px;
+  }
+
+  .keyPercent {
+    bottom: 6px;
+  }
+}
