@@ -57,7 +57,7 @@ module.exports = {
     ],
   },
   devtool: setupDevtool(),
-  plugins: [new HTMLWebpackPlugin({ template: path.resolve(__dirname, 'index.html') })],
+  plugins: [new HTMLWebpackPlugin({ template: path.resolve(__dirname, './src/index.html') })],
   devServer: {
     port: 3000,
     hot: IS_DEV,
