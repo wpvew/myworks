@@ -1,0 +1,84 @@
+@import './var.scss', './mixin.scss';
+
+.control {
+  padding: 0 30px 7px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.switchBtn {
+  @include fontClass(18px, 1, 600);
+  & > span {
+    color: rgba($grayEB, 0.8);
+  }
+  &.active > span {
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+.switchForecast {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .switchBtn {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -7px;
+      left: -4px;
+      right: -4px;
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255, 0.4) 50%, rgba(255,255,255,0) 100%);
+      border-image-slice: 1;
+      opacity: 0;
+      transition: opacity 2s easy;
+    }
+
+    &.active::after {
+      opacity: 1;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .control {
+    margin-bottom: auto;
+    padding: 0 30px 7px;
+  }
+  .switchForecast {
+    width: auto;
+    margin-right: auto;
+
+    .switchBtn {
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .switchTemp {
+    display: flex;
+
+    .switchBtn {
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}

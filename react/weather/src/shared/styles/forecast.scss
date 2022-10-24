@@ -1,0 +1,54 @@
+@import './var.scss', './mixin.scss';
+
+.forecast {
+  .image {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.hourItem {
+  @include fontClass(15px, 1, 600);
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgb(109 109 109 / 20%);
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+  transform: perspective(10px) rotateY(-3deg);
+
+  &.active {
+    background: rgb(131,58,180);
+    background: linear-gradient(32deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  }
+
+  & > * {
+    margin-bottom: 5px;
+  }
+
+  .temperature {
+    position: relative;
+    display: flex;
+
+    .tempLabel {
+      position: absolute;
+      top: -1px;
+      right: -6px;
+    }
+  }
+}
+
+@media all and (min-width: 769px) {
+  .forecast {
+    margin-bottom: auto;
+  }
+
+  .hourItem {
+    border-radius: 20px;
+    border: none;
+    transform: perspective(10px) rotateY(-2deg);
+  }
+}

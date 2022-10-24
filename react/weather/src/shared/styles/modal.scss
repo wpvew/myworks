@@ -1,0 +1,20 @@
+@import './var.scss', './mixin.scss';
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 12px;
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, .3);
+}
+
+@media all and (min-width: 768px) {
+  .modal {
+    padding-left: 50px;
+    height: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    backdrop-filter: unset;
+  }
+}

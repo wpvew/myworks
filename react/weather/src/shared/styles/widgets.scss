@@ -1,0 +1,150 @@
+@import './var.scss', './mixin.scss';
+
+.title {
+  display: none;
+}
+
+.widgetsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.widgetsItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+  height: 140px;
+  border-radius: 16px;
+  @include fontClass(15px, 1, 600);
+  color: rgba($grayEB, 0.6);
+  box-shadow: 2px 2px 7px rgb(0 0 0 / 100%);
+
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+
+  & > svg {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    transform: translateY(-1px);
+  }
+}
+
+.value {
+  @include fontClass(32px, 1, 400);
+  color: white;
+}
+
+.addInfo {
+  margin-top: auto;
+  @include fontClass(18px, 1, 400);
+}
+
+@media all and (min-width: 480px) {
+  .widgetsList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 619px) {
+  [data-grid="SUNRISE"] {
+    grid-column: 2/-1;
+  }
+}
+
+@media all and (min-width: 620px) {
+  .widgetsList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media all and (min-width: 769px) {
+  .title {
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    @include fontClass(18px, 1, 700);
+  }
+
+  .widgetsItem {
+    border: none;
+    background: none;
+    box-shadow: 5px 4px 10px rgb(0 0 0 / 25%), inset 1px 1px 0px rgb(255 255 255 / 25%);
+  }
+
+  .widgetsItem {
+    font-size: 12px;
+    box-shadow: none;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .addInfo {
+    display: none;
+  }
+
+}
+
+@media all and (min-width: 1024px) {
+  .widgetsList {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+  }
+
+  .widgetsItem {
+    height: 100%;
+    border: 1px solid;
+  }
+
+  [data-grid="SUNRISE"] {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    order: 1;
+    height: 100%;
+
+    .value {
+      display: none;
+    }
+    .name::after {
+      content: ' & SUNSET';
+    }
+  }
+  [data-grid="FEELS LIKE"] {
+    order: 8;
+    grid-column: 3/-1;
+  }
+  [data-grid="HUMIDITY"] {
+    order: 3;
+  }
+  [data-grid="PRECIPITATION"] {
+    order: 4;
+  }
+  [data-grid="PRESSURE"] {
+    order: 5;
+  }
+  [data-grid="UV INDEX"] {
+    order: 7;
+    grid-column: 1/3;
+  }
+  [data-grid="VISIBILITY"] {
+    order: 6;
+  }
+  [data-grid="WIND"] {
+    order: 2;
+    grid-column: 3/-1;
+    grid-row: 1/3;
+    height: 100%;
+  }
+
+  .addInfo {
+    display: block;
+  }
+}

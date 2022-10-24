@@ -1,0 +1,111 @@
+.svg circle {
+  stroke-width: 2px;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+.range {
+  stroke: black;
+}
+.svg .bar {
+  // transition: stroke-dashoffset 1s linear;
+  stroke: #FF9F1E;
+}
+
+.cont {
+  margin-bottom: 5px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.radius {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  height: 100%;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 42px;
+    width: 94%;
+    height: 1px;
+    background-color: #575757;
+  }
+}
+.semiCircle {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 110px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.sunWrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(-50% -50%, 130% -50%, 130% 100%, -50% 100%);
+}
+
+.sun {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 50%;
+  transform-origin: right;
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 0, 1);
+    border-radius: 50%;
+  }
+
+  &::before {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: -12px;
+    filter: blur(25px);
+  }
+}
+
+.graph {
+  display: none;
+  position: relative;
+}
+
+.graphName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1px;
+  color: #FF9F1E;
+
+  & > span:last-child {
+    color: #3535f6;
+  }
+}
+
+.graphValue {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media all and (min-width: 1024px) {
+  .radius {
+    display: flex;
+  }
+
+  .graph {
+    display: block;
+  }
+}

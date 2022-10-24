@@ -1,0 +1,10 @@
+@import './var.scss', './mixin.scss';
+
+.service {
+  width: 101%;
+  height: 101vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
+}

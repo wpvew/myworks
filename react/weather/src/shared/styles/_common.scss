@@ -1,0 +1,35 @@
+@import './fonts.scss';
+@import './var.scss', './mixin.scss';
+
+html {
+  // box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @include reset;
+  min-width: 340px;
+  font-family: SFUI, serif;
+  font-size: 0;
+  color: $white;
+  background-color: $black;
+  overflow-x: hidden;
+}
+
+ul, a, button {
+  @include reset;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}

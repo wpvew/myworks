@@ -5,14 +5,24 @@ Please see project descriptions below.**
 ## REACT
 ### **MIRROR REDDIT**
 **https://mirror-redd-react.herokuapp.com/**  
-My biggest SSR mobile responsive React and typescript project for viewing and managment posts from reddit.com.\
+My main pet-project. SSR mobile responsive React and typescript project for viewing and managment posts from reddit.com.\
 ***To use, you need an account on reddit and login.***\
 Implemented many functions that are performed on reddit, some of them: infinite scroll, search through all reddit posts, sorting posts list, opening posts, saving, hiding, like and dislike, commenting, etc.
 >Development watch package - `npm run dev`;\
 >Build package - `npm run build`;\
+>Watch package - `npm run watch`;\
 >Client will start in `http://localhost:3000`;
+***Used tools: React, CSS, JS, TypeScript, Redux, Redux-Thunk, SSR, WebPack, OAuth2 reddit, eslint.***
 
-***Used tools: HTML, CSS, JS, React, TypeScript, Redux, Redux-Thunk, SSR, WebPack, OAuth2 reddit, eslint.***
+### **WEATHER APP**
+**https://weather-messer.herokuapp.com/**  
+Weather app using your geolocation and selecting any other location .\
+>Development watch package - `npm run dev`;\
+>Build package - `npm run build`;\
+>Watch package - `npm run watch`;\
+>Client will start in `http://localhost:4000`;
+***Used tools: React, SCSS, JS, TypeScript, Redux, Redux-Thunk, SSR, WebPack, eslint.***
+
 ### **STARWARS**
 This is a simple project in react with typescript implements ajax request.
 >Development watch package - `npm start`; \

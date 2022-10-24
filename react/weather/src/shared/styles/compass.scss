@@ -1,0 +1,98 @@
+@import './var.scss', './mixin.scss';
+
+.compass {
+  position: relative;
+  display: none;
+  width: 160px;
+  height: 160px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    circle {
+      stroke-dasharray: 1, 6;
+      stroke-width: 10px
+    }
+  }
+}
+
+.directHor, .directVer {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  display: block;
+  top: calc(50% - 1px);
+}
+
+.directVer {
+  transform: rotate(90deg);
+}
+.arrow {
+  position: absolute;
+  width: calc(50% - 10px);
+  height: 2px;
+  display: block;
+  top: calc(50% - 1px);
+  left: 10px;
+  transform-origin: right;
+  z-index: 10;
+
+  & svg {
+    position: absolute;
+    top: calc(50% - 13px);
+    left: -20px;
+    width: 26px;
+    height: 26px;
+    transform: rotate(-180deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 13px);
+    left: -20px;
+    width: 26px;
+    height: 26px;
+    background-color: blue;
+    filter: blur(25px);
+  }
+}
+.diraction {
+  position: absolute;
+  @include fontClass(20px, 1, 400);
+
+  &[data-dir="N"] {
+    top: 10px;
+    left: calc(50% - 6px);
+  }
+  &[data-dir="S"] {
+    bottom: 10px;
+    left: calc(50% - 6px);
+  }
+  &[data-dir="W"] {
+    left: 13px;
+    top: calc(50% - 9px);
+  }
+  &[data-dir="E"] {
+    right: 13px;
+    top: calc(50% - 9px);
+  }
+}
+
+.windValue {
+  @include fontClass(14px, 1, 400);
+}
+
+@media all and (min-width: 1024px) {
+  .compass {
+    display: flex;
+    flex-direction: column;
+  }
+}

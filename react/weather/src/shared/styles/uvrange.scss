@@ -1,0 +1,52 @@
+@import './var.scss', './mixin.scss';
+
+.uv {
+  display: none;
+  align-items: center;
+  margin-top: 15px;
+}
+
+$bgColor: linear-gradient(90deg, rgba(52,163,62,1) 0%, rgba(225,255,0,1) 25%, rgba(249,145,0,1) 50%, rgba(255,0,0,1) 75%, rgba(170,23,168,1) 100%);
+.range {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 6px;
+  border-radius: 10px;
+  background: $bgColor;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background: $bgColor;
+    filter: blur(20px);
+  }
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  border-radius: 10px;
+}
+.bar::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(100% - 6px);
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+
+@media all and (min-width: 1024px) {
+  .uv {
+    display: flex;
+  }
+}

@@ -1,0 +1,32 @@
+@import './var.scss', './mixin.scss';
+
+.tabBar {
+  position: fixed;
+  z-index: 100;
+  top: -1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 101%;
+  box-shadow: 0px 0px 13px -2px black;
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+}
+
+.tabBtn {
+  color: $white;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  @include fontClass(14px, 1, 400);
+  letter-spacing: 2px;
+  color: $white;
+}
+
+@media all and (min-width: 769px) {
+  .tabBar {
+    display: none;
+  }
+}

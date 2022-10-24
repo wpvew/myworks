@@ -1,0 +1,92 @@
+@import './var.scss', './mixin.scss';
+
+.searchLocation {
+  position: relative;
+  padding: 0 20px;
+}
+
+.inputGroup {
+  display: flex;
+}
+
+.input {
+  position: relative;
+  margin-right: auto;
+  padding: 7px 10px;
+  width: 80%;
+  font-size: 18px;
+  color: $black;
+  background-color: rgba($grayEB, 0.9);
+  border-radius: 7px;
+  border: none;
+  z-index: 10;
+}
+
+.cancelBtn {
+  font-size: 18px;
+  color: $white;
+}
+
+.dropdown {
+  padding: 10px 0;
+}
+
+.searchItem {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba($grayEB, 0.6);
+}
+
+.searchBtn {
+  width: 100%;
+  text-align: left;
+  @include fontClass(20px, 1, 400);
+  color: $white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .searchLocation {
+    margin-bottom: auto;
+    padding: 0;
+  }
+
+  .input {
+    margin: 0;
+    width: 100%;
+    border-radius: 15px;
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+
+  .searchBtn {
+    font-size: 14px;
+  }
+
+  .searchItem {
+    padding: 7px 0;
+  }
+
+  .cancelBtn {
+    display: none;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 20px;
+    padding: 20px 15px;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    background: linear-gradient(14deg, rgb(34, 163, 195, 0.1) 23%, rgba(253, 169, 45, 0.1) 100%);
+    z-index: 1;
+    backdrop-filter: blur(10px);
+  }
+}

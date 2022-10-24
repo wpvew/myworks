@@ -1,0 +1,20 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+  background-color: rgba(black, 0.5);
+  z-index: 10;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(14deg, rgba(34,163,195,1) 23%, rgba(253,169,45,0.6) 100%);
+    z-index: -1;
+    filter: blur(100px);
+    opacity: 0.3;
+  }
+}
