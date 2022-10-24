@@ -12,6 +12,7 @@ Implemented many functions that are performed on reddit, some of them: infinite 
 >Build package - `npm run build`;\
 >Watch package - `npm run watch`;\
 >Client will start in `http://localhost:3000`;\
+
 ***Used tools: React, CSS, JS, TypeScript, Redux, Redux-Thunk, SSR, WebPack, OAuth2 reddit, eslint.***
 
 ### **WEATHER APP**
@@ -21,6 +22,7 @@ Weather app using your geolocation and selecting any other location .\
 >Build package - `npm run build`;\
 >Watch package - `npm run watch`;\
 >Client will start in `http://localhost:4000`;\
+
 ***Used tools: React, SCSS, JS, TypeScript, Redux, Redux-Thunk, SSR, WebPack, eslint.***
 
 ### **STARWARS**
