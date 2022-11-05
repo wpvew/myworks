@@ -1,0 +1,101 @@
+@import './mixin.scss', './var.scss';
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1400px;
+  height: calc(100% - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authorization {
+  position: relative;
+  padding: 20px;
+  background-color: $white;
+  max-width: 500px;
+  border-radius: 7px;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.authorizationForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.inputTitle {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.input {
+  padding: 5px 10px;
+  min-width: 300px;
+  border: 1px solid $greyB0;
+  font-size: 16px;
+}
+
+.controlBtn {
+  display: flex;
+}
+
+.loginBtn {
+  margin-right: 20px;
+  padding: 8px 30px;
+  align-self: center;
+  border: 1px solid;
+  @include fontClass(16px, 1, 400);
+  @include btnHover;
+}
+
+.sighupBtn {
+  &:disabled {
+    opacity: 0.7
+  }
+  &[disabled="true"] {
+    opacity: 0.7
+  }
+}
+
+.errMsg {
+  @include err;
+  top: 24px;
+  right: 20px;
+}
+
+.authError {
+  @include err;
+  top: 24px;
+  right: 3px;
+}
+
+.regErr {
+  @include err;
+  top: 20px;
+  right: 20px;
+}
+
+.backBtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  padding-top: 10px;
+  @include fontClass(20px, 1, 400);
+}

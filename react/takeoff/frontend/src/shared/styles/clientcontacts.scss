@@ -1,0 +1,141 @@
+@import './mixin.scss', './var.scss';
+
+.contacts {
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -$modalPadding;
+    left: -$modalPadding;
+    background-color: $greyEE;
+    z-index: -1;
+  }
+
+  &.noEmpty {
+    padding: 25px 0;
+  }
+}
+
+.addContactBtn {
+  display: flex;
+  position: relative;
+  @include fontClass(14px, 1, 400);
+
+  & .text {
+    transition: color .3s ease-in-out;
+  }
+
+  & .icon {
+    position: relative;
+    margin-right: 5px;
+    height: 14px;
+    z-index: 10;
+    color: $secondary-color;
+    transition: color .3s ease-in-out;
+
+    & > svg > * {
+      fill: currentColor;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      bottom: 1px;
+      left: 1px;
+      right: 1px;
+      background-color: transparent;
+      border-radius: 50%;
+      z-index: -1;
+      transition: background-color .3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    & .text {
+      color: $secondary-color;
+    }
+    & .icon {
+      color: $greyEE;
+      &::after {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+.contactList {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contactGroup {
+  position: relative;
+  display: flex;
+  margin-bottom: 15px;
+  width: 100%;
+  list-style: none;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.contactInput {
+  width: 80%;
+  padding: 8px 12px;
+  border: 1px solid #C8C5D1;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  @include fontClass(14px, 1, 400);
+}
+
+.contactDeleteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 25px;
+  background-color: #E7E5EB;
+  border: 1px solid #C8C5D1;
+  color: #B0B0B0;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
+
+  & svg {
+    fill: currentColor;
+  }
+
+  &:hover {
+    border-color: #F06A4D;
+    color: #F06A4D;
+  }
+}
+
+.errMsg {
+  @include err;
+  top: calc(50% - 6px);
+  right: 30px;
+}
+
+
+@media all and (max-width: 480px) {
+  .contacts {
+    &.noEmpty {
+      padding: 15px 0;
+    }
+  }
+  .contactList {
+    margin-bottom: 15px;
+  }
+}

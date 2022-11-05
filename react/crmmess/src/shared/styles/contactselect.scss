@@ -1,0 +1,101 @@
+@import './mixin.scss', './var.scss';
+
+$contactFieldPadding: 10px;
+
+.contactSelector {
+  position: relative;
+  width: 30%;
+  min-width: 95px;
+  @include fontClass(12px, 1, 400)
+}
+
+.selected {
+  position: relative;
+  padding: 10px;
+  background-color: $greyE7E5EB;
+  border: 1px solid $greyC8C5D1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 10px;
+    border: solid $secondary-color;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform .3s ease-in-out;
+  }
+
+  &.active::after {
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+  }
+}
+
+.selectorBtn {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
+
+.contactFieldList {
+  padding: 0 $contactFieldPadding;
+  background-color: #eeeeee;
+  border: 1px solid $greyC8C5D1;
+  overflow: hidden;
+}
+
+.contactField {
+  position: relative;
+  padding: 5px 0;
+
+
+
+  &:last-child {
+    padding-bottom: 10px;
+  }
+  &:first-child {
+    padding-top: 10px;
+  }
+}
+
+.contactFieldBtn {
+  @include fontClass(12px, 1, 400);
+
+  & > span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    bottom: -3px;
+    left: -$contactFieldPadding;
+    right: -$contactFieldPadding;
+    transition: background-color .2s ease-in-out;
+    z-index: 1;
+  }
+
+  &:hover::after {
+    background-color: $greyE7E5EB;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,29 @@
+@import './mixin.scss', './var.scss';
+
+.delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+
+.deleteBtn {
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  @include fontClass(14px, 1, 600);
+  background-color: $secondary-color;
+  color: $white;
+  @include btnHover;
+}
+
+.cancelBtn {
+  text-decoration: underline;
+}

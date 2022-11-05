@@ -1,0 +1,36 @@
+@import './mixin.scss', './var.scss';
+
+.main {
+  padding: 50px 0;
+  background-color: $greyE5;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1400px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media all and (max-width: 960px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .main {
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,142 @@
+@import './mixin.scss', './var.scss';
+
+.client {
+  display: grid;
+  grid-template-columns: $grid-table;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 2px;
+  background-color: $white;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.clientInfo {
+  &[client-data="contacts"] {
+    display: flex;
+  }
+  &[client-data="id"] {
+    color: $greyB0;
+  }
+}
+
+.time {
+  color: $greyB0;
+}
+.contactList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  margin-right: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  & svg {
+    opacity: 0.7;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+}
+
+.btns {
+  display: flex;
+  & svg {
+    margin-right: 3px;
+  }
+  > * {
+    margin-right: 20px;
+    @include btnLinkHover;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.btnDelete {
+  & svg {
+    fill: $red;
+    transform: translateY(1px);
+  }
+  &:hover {
+    color: $red;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .client {
+    padding: 10px;
+    grid-template-columns: $grid-table-768;
+  }
+
+  .btns {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: flex-end;
+
+    > * {
+      margin: 0;
+      margin-bottom: 5px;
+      display: block;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .client {
+    // grid-template-columns: $grid-table-768;
+  }
+
+  .btns * {
+    @include fontClass(12px, 1, 400);
+  }
+
+  .clientInfo {
+    font-size: 12px;
+
+    &[client-data="createdAt"], &[client-data="updatedAt"] {
+      display: flex;
+      flex-direction: column;
+
+      & > * {
+        margin-bottom: 5px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .client {
+    grid-template-columns: $grid-table-640;
+  }
+}
+@media all and (max-width: 480px) {
+  .client {
+    padding: 15px 10px;
+    grid-template-columns: $grid-table-480;
+  }
+
+  .btns {
+    & > * {
+      margin-bottom: 15px;
+    }
+  }
+}

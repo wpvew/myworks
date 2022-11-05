@@ -1,0 +1,58 @@
+@import './mixin.scss', './var.scss';
+
+.container {
+  position: relative;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.title {
+  margin: 0;
+  margin-right: 15px;
+  @include fontClass(18px, 1, 700);
+}
+
+.clientId {
+  @include fontClass(12px, 1, 400);
+  color: $greyB0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.SaveBtn {
+  padding: 10px 40px;
+  align-self: center;
+  font-size: 16px;
+  border: 1px solid;
+  @include btnHover;
+}
+
+@media all and (max-width: 640px) {
+  .form {
+    min-width: unset;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .form {
+    min-width: unset;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+}

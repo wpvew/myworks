@@ -1,0 +1,33 @@
+@import './var.scss';
+
+@mixin btnLinkHover {
+  transition: color .2s ease-in-out;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@mixin fontClass($fontSize, $fontLineHeaight, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $fontLineHeaight;
+}
+
+@mixin btnHover {
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+
+  &:hover {
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+@mixin err {
+  position: absolute;
+  top: -3px;
+  right: 1px;
+  font-size: 10px;
+  color: $red;
+}

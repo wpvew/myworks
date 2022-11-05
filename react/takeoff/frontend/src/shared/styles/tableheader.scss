@@ -1,0 +1,74 @@
+@import './mixin.scss', './var.scss';
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: $grid-table;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  // color: $greyB0;
+}
+
+.tableTitle {
+  list-style: none;
+  color: $greyB0;
+  @include fontClass(12px, 1, 400);
+}
+
+.tableSortBtn {
+  color: $greyB0;
+
+  & .text {
+    margin-right: 5px;
+    @include fontClass(12px, 1, 400);
+    color: $greyB0;
+  }
+
+  & svg {
+    fill: currentColor
+  }
+
+  &.active {
+    color: $secondary-color;
+
+    &.down svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media all and (max-width: 960px) {
+  .tableHeader {
+    padding: 0 10px;
+    grid-template-columns: $grid-table-768;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .tableHeader {
+    // grid-template-columns: $grid-table-768;
+  }
+  .tableTitle {
+    font-size: 10px;
+    &[client-data="buttons"] {
+      justify-self: flex-end;
+    }
+  }
+  .tableSortBtn {
+    & .text {
+      font-size: 10px;
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  .tableHeader {
+    grid-template-columns: $grid-table-640;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .tableHeader {
+    grid-template-columns: $grid-table-480;
+  }
+}

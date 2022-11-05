@@ -1,0 +1,14 @@
+.profileEnter {
+  transform: translateX(100%);
+}
+.profileEnterActive {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.profileExit {
+  transform: translateX(0);
+}
+.profileExitActive {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}

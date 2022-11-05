@@ -1,0 +1,21 @@
+$primary-color: #333;
+$secondary-color: #9873FF;
+$red: #F06A4D;
+$greyB4: #b4b4b4;
+$greyB0: #b0b0b0;
+$greyE5: #e5e5e5;
+$greyE7E5EB: #E7E5EB;
+$greyC8C5D1: #C8C5D1;
+$greyEE: #eee;
+$white: #fff;
+
+// $grid-table: minmax(358px, 730px) minmax(250px, 400px) minmax(80px, 170px);
+$grid-table: minmax(244px, 480px) minmax(120px, 200px) minmax(120px, 200px) minmax(160px, 220px) minmax(170px, 200px);
+$grid-table-768: minmax(224px, 480px) minmax(100px, 200px) minmax(100px, 200px) minmax(100px, 220px) minmax(90px, 90px);
+$grid-table-640: minmax(204px, 480px) minmax(80px, 200px) minmax(80px, 200px) minmax(75px, 220px);
+$grid-table-480: minmax(200px, 380px) minmax(73px, 73px);
+
+$modalPadding: 24px;
+
+@media all and (max-width: 768px) {
+}

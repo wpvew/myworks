@@ -1,0 +1,16 @@
+@import './mixin.scss', './var.scss';
+
+.table {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.btnAddition {
+  padding: 15px 30px;
+  align-self: center;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid;
+  @include btnHover;
+}

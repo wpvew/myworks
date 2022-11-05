@@ -1,0 +1,67 @@
+@import './mixin.scss', './var.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.inputTitle {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: $greyB0;
+  z-index: -1;
+  transform-origin: left;
+  transition: transform .3s ease-in-out;
+
+  & > .requireMarker {
+    color: $secondary-color;
+  }
+}
+
+.input {
+  padding: 3px 0;
+  @include fontClass(14px, 1, 400);
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $greyC8C5D1;
+  transition: border-color .3s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: $secondary-color
+  }
+  &:focus + .inputTitle, &.active + .inputTitle  {
+    transform: translateY(-15px) scale(0.75);
+  }
+}
+
+.errMsg {
+  @include err;
+  top: unset;
+  bottom: 5px;
+}
+
+@media all and (max-width: 480px) {
+  .inputGroup {
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
+  }
+}
