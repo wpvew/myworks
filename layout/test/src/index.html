@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+  "title": "Главная"
+})
+<body>
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol fill="" viewBox="0 0 32 48" id="certificate" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M31.754 9.39a.792.792 0 00-.017-.152.976.976 0 00-.032-.117l-.01-.028a1.042 1.042 0 00-.047-.107l-.003-.005a.913.913 0 00-.065-.103c-.005-.009-.012-.017-.018-.025a.946.946 0 00-.081-.095L22.997.275a.946.946 0 00-.094-.082l-.026-.018a.888.888 0 00-.102-.065l-.007-.003a.985.985 0 00-.25-.09h-.002a.992.992 0 00-.119-.014L22.367 0 22.333 0H1.094a.937.937 0 00-.938.937v40.128c0 .517.42.937.938.937h14.114v5.06a.938.938 0 001.436.795l3.57-2.24 3.571 2.24a.939.939 0 001.436-.795v-5.06h5.597c.517 0 .937-.42.937-.937V9.42l-.001-.032zM23.272 3.2l5.282 5.283h-5.282V3.2zm-8.526 25.756c-.066-.18-.174-.472-.176-.592.073-.09.327-.251.483-.35.334-.21.713-.45.987-.824.277-.379.39-.815.49-1.2.043-.17.114-.441.174-.544.033-.007.102-.017.232-.017.104 0 .221.006.345.012.142.007.289.014.442.014.337 0 .61-.038.857-.12.432-.144.777-.422 1.082-.667.168-.136.45-.363.548-.376.108.014.39.24.558.376.304.245.65.523 1.082.667.247.082.52.12.857.12.153 0 .3-.007.441-.014.124-.006.241-.012.346-.012.13 0 .199.01.232.017.06.103.13.375.174.543.1.386.212.822.49 1.2.274.375.652.614.987.825.155.099.41.26.483.35-.003.12-.11.413-.176.592-.14.38-.297.81-.297 1.287 0 .477.157.908.297 1.288.066.18.173.472.175.592-.073.09-.327.25-.482.35-.334.21-.713.45-.987.824-.278.378-.39.815-.49 1.2-.044.169-.114.441-.174.544a1.169 1.169 0 01-.232.017c-.105 0-.222-.006-.346-.012-.141-.007-.288-.015-.44-.015-.339 0-.611.039-.858.12-.432.144-.778.423-1.082.668-.166.134-.443.356-.553.376-.11-.02-.387-.242-.553-.376-.305-.245-.65-.524-1.082-.667a2.657 2.657 0 00-.857-.12c-.153 0-.3.007-.442.014-.123.006-.24.012-.345.012-.13 0-.199-.01-.232-.017-.06-.103-.13-.375-.174-.544-.1-.385-.213-.822-.49-1.2-.274-.374-.653-.614-.987-.825-.155-.098-.41-.259-.483-.35.003-.119.11-.412.176-.59.14-.38.297-.811.297-1.288 0-.478-.158-.909-.297-1.288zm8.6 16.41l-2.633-1.651a.94.94 0 00-.997 0l-2.633 1.652V36.93l.293-.011c.124-.007.24-.013.347-.013.166 0 .237.015.264.025.112.037.327.21.5.349.437.352.981.79 1.728.79.746 0 1.29-.438 1.728-.79.173-.14.387-.312.499-.35a.929.929 0 01.265-.024c.106 0 .223.006.347.013.095.004.193.008.292.01v8.438zm1.875-5.24v-3.952c.279-.378.395-.827.494-1.207.052-.2.122-.474.187-.561.064-.088.302-.239.476-.349.462-.291 1.036-.654 1.264-1.34.225-.678-.01-1.317-.198-1.832-.086-.233-.183-.497-.183-.642 0-.144.097-.409.183-.642.189-.514.423-1.154.198-1.831-.228-.686-.802-1.049-1.264-1.34-.174-.11-.412-.261-.476-.348-.065-.088-.136-.362-.187-.562-.135-.522-.303-1.171-.877-1.593-.457-.334-.986-.373-1.345-.373a8.33 8.33 0 00-.44.015 7.217 7.217 0 01-.346.012.92.92 0 01-.265-.025c-.111-.037-.326-.21-.498-.349-.438-.352-.983-.79-1.73-.79-.745 0-1.29.438-1.728.79-.172.139-.387.312-.498.35a.922.922 0 01-.265.024c-.106 0-.223-.006-.348-.013-.14-.007-.287-.014-.439-.014-.358 0-.887.039-1.344.373-.575.422-.743 1.071-.877 1.593-.052.2-.123.474-.187.561-.064.088-.303.239-.477.348-.461.292-1.035.655-1.263 1.34-.226.678.009 1.318.197 1.832.086.233.183.498.183.642 0 .145-.097.41-.183.643-.188.514-.423 1.154-.197 1.831.228.686.802 1.049 1.263 1.34.175.11.413.261.477.349.064.087.135.36.187.56.098.381.215.83.494 1.208v3.952H2.03V1.875h19.366v7.546c0 .518.42.938.937.938h7.546v29.768h-4.659z" fill=""/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.675 10.359h12.078a.938.938 0 000-1.875H5.675a.937.937 0 100 1.875zM26.341 13.216H5.675a.937.937 0 100 1.875H26.34a.937.937 0 100-1.875zM22.591 17.948H5.675a.938.938 0 000 1.875H22.59a.937.937 0 100-1.875zM26.341 17.948a.94.94 0 00-.937.938.94.94 0 00.938.937.94.94 0 00.937-.938.94.94 0 00-.938-.937z" fill=""/></symbol><symbol fill="" viewBox="0 0 16 12" id="check-mark" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.5L5.5 10l9-9" stroke="#000" stroke-width="1.8"/></symbol><symbol fill="" viewBox="0 0 64 64" id="click" xmlns="http://www.w3.org/2000/svg"><path d="M63.45 52.844L52.638 42.031l5.304-5.303a1.875 1.875 0 00-.733-3.105l-31.82-10.607a1.875 1.875 0 00-2.372 2.372l10.607 31.82a1.875 1.875 0 003.105.733l5.303-5.303L52.844 63.45c.367.366.846.55 1.326.55.48 0 .96-.184 1.326-.55l7.955-7.955a1.875 1.875 0 000-2.652zm-9.28 6.63L43.356 48.66a1.875 1.875 0 00-2.651 0l-4.484 4.484L27.76 27.76l25.384 8.461-4.484 4.484a1.875 1.875 0 000 2.652L59.473 54.17l-5.303 5.303zM24.375 15c1.035 0 1.875-.84 1.875-1.875V1.875a1.875 1.875 0 00-3.75 0v11.25c0 1.036.84 1.875 1.875 1.875zM9.79 7.14a1.875 1.875 0 10-2.65 2.65l7.954 7.956a1.875 1.875 0 102.652-2.652L9.79 7.14zM15.094 31.004L7.14 38.96a1.875 1.875 0 002.652 2.652l7.955-7.955a1.875 1.875 0 00-2.652-2.652zM33.656 17.746L41.61 9.79a1.875 1.875 0 00-2.652-2.652l-7.955 7.955a1.875 1.875 0 102.652 2.652zM15 24.375c0-1.035-.84-1.875-1.875-1.875H1.875a1.875 1.875 0 000 3.75h11.25c1.036 0 1.875-.84 1.875-1.875z" fill=""/></symbol><symbol fill="" viewBox="0 0 52 52" id="clock" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#dclip0_2_237)" fill=""><path d="M26.018 51.066h-.002C12.197 51.066.953 39.82.951 26 .951 12.18 12.194.936 26.015.936S51.08 12.18 51.08 26c0 13.822-11.242 25.066-25.061 25.066zm-.003-48.13C13.297 2.936 2.951 13.283 2.951 26c.001 12.718 10.348 23.066 23.066 23.066h.002c12.715 0 23.06-10.347 23.06-23.066 0-12.717-10.346-23.064-23.064-23.064z"/><path d="M26.018 43.75h-.002c-9.786 0-17.75-7.963-17.75-17.75 0-9.787 7.962-17.75 17.75-17.75 9.787 0 17.75 7.963 17.75 17.75 0 9.787-7.962 17.75-17.748 17.75zm-.003-33.5c-8.684 0-15.75 7.066-15.75 15.75.002 8.685 7.067 15.75 15.752 15.75h.001c8.683 0 15.748-7.066 15.748-15.75 0-8.684-7.066-15.75-15.75-15.75z"/><path d="M26.015 29.117a3.1 3.1 0 01-2.203-.91 3.123 3.123 0 010-4.411 3.096 3.096 0 012.203-.913c.833 0 1.616.324 2.204.914a3.123 3.123 0 010 4.409 3.096 3.096 0 01-2.204.911zm0-4.234a1.12 1.12 0 00-.789 1.91c.419.418 1.157.42 1.579-.002a1.12 1.12 0 000-1.582 1.11 1.11 0 00-.79-.326z"/><path d="M27.512 25.503a1 1 0 01-.707-1.707l6.902-6.901a1 1 0 111.414 1.414l-6.902 6.901a.995.995 0 01-.707.293zM24.508 25.493a.996.996 0 01-.707-.293l-5.125-5.125a1 1 0 011.414-1.415l5.125 5.126a1 1 0 01-.707 1.707z"/></g><defs><clipPath id="dclip0_2_237"><path fill="" d="M0 0h52v52H0z"/></clipPath></defs></symbol><symbol fill="" viewBox="0 0 48 48" id="coin" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#eclip0_2_269)" fill=""><path d="M28.364 13.09h-7.637c-.602 0-1.09.49-1.09 1.092v14.182h-5.455a1.091 1.091 0 000 2.181h5.454v3.273a1.091 1.091 0 002.182 0v-3.272h5.455a1.091 1.091 0 000-2.182h-5.455v-2.182h6.546a6.553 6.553 0 006.545-6.546 6.553 6.553 0 00-6.545-6.545zm0 10.91h-6.546v-8.727h6.546a4.368 4.368 0 014.363 4.363A4.368 4.368 0 0128.364 24z"/><path d="M24 0C10.767 0 0 10.767 0 24s10.767 24 24 24 24-10.767 24-24S37.233 0 24 0zm0 45.818C11.97 45.818 2.182 36.031 2.182 24 2.182 11.97 11.969 2.182 24 2.182c12.03 0 21.818 9.787 21.818 21.818 0 12.03-9.787 21.818-21.818 21.818z"/></g><defs><clipPath id="eclip0_2_269"><path fill="" d="M0 0h48v48H0z"/></clipPath></defs></symbol><symbol fill="" viewBox="0 0 54 64" id="oil" xmlns="http://www.w3.org/2000/svg"><path d="M53.382 11.374v-3.75H23.919V0H7.987v7.624H.618v3.75h3.295V60.25H.618V64h52.764v-3.75h-3.295V11.374h3.295zM11.737 3.75h8.432v3.874h-8.432V3.75zm34.6 44.336H7.663V23.539h38.674v24.547zM7.663 60.25v-8.414h38.674v8.414H7.663zm38.674-40.461H7.663v-8.415h38.674v8.415z" fill=""/><path d="M27 43.795a6.542 6.542 0 006.535-6.534c0-4.08-4.762-8.337-5.305-8.81L27 27.381l-1.23 1.07c-.543.473-5.305 4.73-5.305 8.81A6.542 6.542 0 0027 43.795zm-.005-11.308c.277.296.579.636.88 1.007 1.214 1.49 1.91 2.863 1.91 3.767A2.788 2.788 0 0127 40.046a2.788 2.788 0 01-2.784-2.785c0-1.309 1.382-3.273 2.78-4.774z" fill=""/></symbol><symbol fill="" viewBox="0 0 20 20" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M.12 5.81a18.48 18.48 0 0014.07 14.07 4.46 4.46 0 005.14-3.05l.51-1.6-5-2.49-2.38 2.38a15.001 15.001 0 01-4.55-3.05 15 15 0 01-3-4.55l2.35-2.38-2.49-5-1.6.51A4.46 4.46 0 00.12 5.81z" fill=""/></symbol><symbol fill="" viewBox="0 0 64 64" id="phone-call" xmlns="http://www.w3.org/2000/svg"><path d="M50.58 39.646c-1.31-1.365-2.89-2.094-4.565-2.094-1.662 0-3.256.716-4.62 2.08l-4.268 4.255c-.352-.189-.703-.365-1.04-.54-.487-.243-.946-.473-1.338-.716-3.998-2.54-7.632-5.849-11.117-10.13-1.688-2.135-2.823-3.932-3.647-5.755 1.108-1.013 2.135-2.067 3.134-3.08.378-.378.757-.77 1.135-1.148 2.836-2.837 2.836-6.51 0-9.347l-3.688-3.688c-.418-.419-.85-.85-1.256-1.283a63.796 63.796 0 00-2.54-2.513c-1.31-1.296-2.877-1.985-4.524-1.985-1.648 0-3.242.689-4.593 1.985l-.027.027-4.593 4.634c-1.729 1.729-2.715 3.836-2.93 6.28-.325 3.945.837 7.619 1.728 10.023 2.188 5.903 5.457 11.374 10.333 17.236C18.081 50.952 25.2 56.53 33.331 60.461c3.107 1.472 7.253 3.215 11.887 3.512.283.013.58.027.85.027 3.12 0 5.741-1.121 7.794-3.35.014-.027.041-.04.055-.067.702-.852 1.512-1.621 2.363-2.445a53.121 53.121 0 001.756-1.743c1.338-1.391 2.04-3.012 2.04-4.674 0-1.674-.716-3.282-2.08-4.633l-7.416-7.442zm4.836 14.223c-.014 0-.014.014 0 0-.527.568-1.067 1.08-1.648 1.648-.878.838-1.77 1.716-2.607 2.702-1.364 1.459-2.972 2.147-5.079 2.147-.203 0-.419 0-.621-.013-4.012-.257-7.74-1.824-10.536-3.16-7.645-3.702-14.359-8.956-19.937-15.616-4.607-5.551-7.686-10.684-9.726-16.195-1.256-3.364-1.715-5.984-1.513-8.456.135-1.58.743-2.89 1.864-4.012l4.606-4.606c.662-.621 1.365-.96 2.054-.96.85 0 1.54.514 1.972.946l.04.041c.824.77 1.608 1.567 2.431 2.418.42.432.851.864 1.284 1.31l3.687 3.688c1.432 1.432 1.432 2.755 0 4.187-.391.392-.77.784-1.161 1.162-1.135 1.161-2.216 2.242-3.39 3.295-.028.028-.055.041-.068.068-1.162 1.162-.946 2.296-.703 3.066l.04.122c.96 2.323 2.31 4.511 4.364 7.118l.013.014c3.728 4.593 7.66 8.172 11.995 10.914.554.351 1.121.635 1.661.905.487.243.946.473 1.338.716.054.027.108.068.162.095.46.23.891.337 1.337.337 1.121 0 1.824-.702 2.053-.932l4.62-4.62c.46-.459 1.189-1.013 2.04-1.013.837 0 1.526.527 1.945.987l.027.027 7.442 7.442c1.392 1.378 1.392 2.796.014 4.228zM34.587 15.224c3.54.594 6.754 2.27 9.32 4.836a17.219 17.219 0 014.836 9.32 1.812 1.812 0 001.797 1.513c.108 0 .202-.014.31-.027a1.825 1.825 0 001.5-2.107c-.73-4.282-2.756-8.186-5.85-11.28-3.092-3.093-6.996-5.119-11.278-5.848-1-.162-1.932.5-2.107 1.486-.176.986.473 1.945 1.472 2.107zM63.926 28.232C62.723 21.18 59.4 14.765 54.295 9.659S42.773 1.23 35.722.028c-.986-.176-1.918.5-2.094 1.486-.162 1 .5 1.931 1.5 2.107 6.294 1.067 12.035 4.052 16.6 8.604 4.566 4.566 7.538 10.307 8.605 16.601a1.812 1.812 0 001.796 1.513c.108 0 .203-.014.31-.027a1.79 1.79 0 001.487-2.08z" fill=""/></symbol><symbol fill="" viewBox="0 0 48 48" id="place" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#iclip0_4_80)" fill=""><path d="M41.889 46.31L35.56 32.923a1.185 1.185 0 00-.608-.584l-3.148-1.401 5.455-9.143a14.77 14.77 0 001.672-6.865c0-4.027-1.58-7.803-4.448-10.631A14.825 14.825 0 0023.79 0c-3.914.055-7.6 1.627-10.377 4.427-2.778 2.8-4.32 6.498-4.343 10.413a14.973 14.973 0 001.67 6.955l5.456 9.143-3.167 1.409c-.259.115-.468.32-.589.575L6.111 46.31a1.184 1.184 0 001.553 1.589l7.927-3.53 7.927 3.53c.307.136.657.136.964 0l7.927-3.53 7.928 3.53a1.183 1.183 0 001.552-1.589zM12.794 20.615a12.423 12.423 0 01-1.356-5.761c.04-6.79 5.595-12.391 12.384-12.485a12.483 12.483 0 018.999 3.616 12.472 12.472 0 013.742 8.945 12.42 12.42 0 01-1.357 5.685L25.017 37.693A1.166 1.166 0 0124 38.27c-.202 0-.706-.056-1.017-.578L12.794 20.617zM32.891 41.99a1.185 1.185 0 00-.964 0L24 45.52l-7.927-3.53a1.185 1.185 0 00-.964 0l-5.492 2.445 4.776-10.102 3.024-1.346 3.531 5.92A3.524 3.524 0 0024 40.638a3.524 3.524 0 003.051-1.733l3.531-5.919 3.025 1.347 4.775 10.1-5.491-2.444z"/><path d="M24 9.526a5.412 5.412 0 00-5.405 5.405A5.412 5.412 0 0024 20.337a5.411 5.411 0 005.406-5.406A5.412 5.412 0 0024 9.526zm0 8.442a3.04 3.04 0 01-3.037-3.037A3.04 3.04 0 0124 11.894a3.04 3.04 0 013.037 3.037A3.04 3.04 0 0124 17.968z"/></g><defs><clipPath id="iclip0_4_80"><path fill="" d="M0 0h48v48H0z"/></clipPath></defs></symbol><symbol fill="" viewBox="0 0 48 49" id="shield" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#jclip0_4_91)" fill=""><path d="M23.99 27.335a.94.94 0 100-1.88.94.94 0 000 1.88z"/><path d="M23.454 47.825a.938.938 0 001.092 0c9.57-6.836 19.18-9.836 19.18-23.902V6.509a.94.94 0 00-.861-.937l-2.442-.204C34.826 4.902 29.32 3.062 24.498.048a.94.94 0 00-.996 0c-4.821 3.014-10.328 4.854-15.926 5.32l-2.44.204a.94.94 0 00-.862.937v17.414c0 14.463 10.959 18.03 19.18 23.902zM6.153 7.373l1.58-.132C13.435 6.765 19.046 4.938 24 1.948c4.953 2.99 10.565 4.817 16.267 5.293l1.58.132v16.55c0 12.683-8.451 15.405-17.849 21.988-8.247-5.725-17.845-8.974-17.845-21.988V7.373z"/><path d="M23.453 40.997a.932.932 0 001.094-.024c8.504-5.886 13.543-7.823 13.543-17.049v-12.32a.94.94 0 00-.8-.93 41.388 41.388 0 01-12.86-4.158.956.956 0 00-.902.021 41.362 41.362 0 01-12.818 4.138.94.94 0 00-.8.929v12.32c0 9.313 5.519 11.599 13.543 17.073zM11.789 12.405a43.21 43.21 0 0011.262-3.54v13.773a.94.94 0 101.879 0V8.857a43.246 43.246 0 0011.281 3.548v11.519c0 7.636-3.576 9.3-11.281 14.511v-8.282a.94.94 0 10-1.879 0v8.31c-7.199-4.793-11.262-6.84-11.262-14.539v-11.52z"/></g><defs><clipPath id="jclip0_4_91"><path fill="" d="M0 0h48v48.094H0z"/></clipPath></defs></symbol><symbol fill="" viewBox="0 0 16 19" id="user" xmlns="http://www.w3.org/2000/svg"><path d="M8 8a4 4 0 100-8 4 4 0 000 8zm7.71 6.2a10.92 10.92 0 00-15.42 0l-.29.3V19h16v-4.5l-.29-.3z" fill=""/></symbol><symbol fill="" viewBox="0 0 42 48" id="way" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.229 7.629a3.854 3.854 0 00-3.85-3.85 3.854 3.854 0 00-3.85 3.85 3.854 3.854 0 003.85 3.85 3.854 3.854 0 003.85-3.85zm-5.825 0c0-1.09.886-1.975 1.975-1.975s1.975.886 1.975 1.975a1.977 1.977 0 01-1.975 1.974A1.977 1.977 0 016.404 7.63zM34.253 24.563c-2.416 0-4.47.602-5.71 1.559l-3.363-.75a.938.938 0 00-.407 1.83l2.577.575c-.048.187-.074.38-.074.576 0 1.274 1.043 2.362 2.713 3.042l-1.501 1.544a.938.938 0 001.345 1.307l2.217-2.282c.687.116 1.426.18 2.203.18 3.977 0 6.976-1.63 6.976-3.79 0-2.162-3-3.791-6.976-3.791zm0 5.705c-3.067 0-5.102-1.152-5.102-1.915 0-.16.09-.336.26-.516a.814.814 0 00.081-.08c.7-.655 2.432-1.32 4.76-1.32 3.067 0 5.102 1.154 5.102 1.916 0 .763-2.035 1.915-5.101 1.915zM23.105 41.168l1.5-1.544a.938.938 0 00-1.344-1.307l-2.218 2.282a13.246 13.246 0 00-2.202-.18c-3.977 0-6.977 1.63-6.977 3.79 0 2.161 3 3.791 6.977 3.791 3.977 0 6.976-1.63 6.976-3.79 0-1.274-1.043-2.362-2.712-3.042zm-4.264 4.957c-3.067 0-5.102-1.153-5.102-1.915 0-.763 2.035-1.916 5.102-1.916 3.066 0 5.101 1.153 5.101 1.916 0 .762-2.035 1.915-5.101 1.915z" fill=""/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.451 25.573a.935.935 0 001.119-.712.937.937 0 00-.711-1.118l-2.578-.575c.049-.187.074-.38.074-.576 0-1.757-1.954-2.943-4.193-3.477l4.184-8.378.02-.042c.425-.97.641-2 .641-3.066C16.007 3.422 12.585 0 8.38 0 4.172 0 .75 3.422.75 7.629a7.573 7.573 0 00.662 3.108l4.187 8.386c-2.244.547-4.197 1.734-4.197 3.47 0 2.16 3 3.79 6.977 3.79 2.415 0 4.47-.603 5.71-1.559l3.362.748zM2.625 7.629a5.76 5.76 0 015.754-5.754 5.76 5.76 0 015.279 8.045l-5.28 10.574L3.1 9.92a5.707 5.707 0 01-.475-2.291zm.652 14.963c0-.492 1.221-1.348 3.185-1.74l1.078 2.159a.937.937 0 001.678 0l1.08-2.164c1.986.376 3.182 1.23 3.182 1.745 0 .16-.091.337-.26.517a.915.915 0 00-.082.08c-.7.654-2.431 1.318-4.76 1.318-3.066 0-5.1-1.152-5.1-1.915zM26.547 35.344a.94.94 0 00-.938.938.94.94 0 00.938.937.94.94 0 00.937-.937.94.94 0 00-.937-.938zM21.316 26.41a.94.94 0 00.937-.938.94.94 0 00-.937-.937.94.94 0 00-.938.938.94.94 0 00.938.937z" fill=""/></symbol></svg>
+  <header class="header">
+    <div class="container">
+      <div class="header__grid-table">
+        <a class="header__grid-element header__logo reset" href="index.html">
+          <img src="@img/logo.png" alt="Логотип">
+        </a>
+
+        <a class="header__grid-element header__phone reset" href="tel:+74951278280" aria-label="Телефон">
+          <svg aria-hidden="true">
+            <use xlink:href="#phone"></use>
+          </svg>
+          <span>
+            8 (495) 127-82-80
+          </span>
+        </a>
+
+        <div class="header__grid-element header__btns">
+          <button class="header__btn reset">Напишите нам</button>
+          <button class="header__btn reset">
+            <svg aria-hidden="true">
+              <use xlink:href="#user"></use>
+            </svg>
+            <span>
+              Личный кабинет
+            </span>
+          </button>
+        </div>
+
+        <div class="header__grid-element header__menu">
+          <button class="burger-menu reset" aria-label="меню">
+            <span></span>
+          </button>
+          <nav class="navbar-menu">
+            <ul class="navbar-menu__list reset">
+              <li class="navbar-menu__item">
+                <a class="navbar-menu__link" href="#">
+                  Доставка топлива
+                </a>
+              </li>
+              <li class="navbar-menu__item">
+                @@include('html/menu-select.html', {
+                  "target": "cards",
+                  "title": "Топливные карты",
+                  "items": '[{"title": "E-100"}, {"title": "Инфорком"}, {"title": "Лукойл"}, {"title": "Роснефть"}, {"title": "Газпромнефть"}, {"title": "Татнефть"}]'
+                })
+              </li>
+              <li class="navbar-menu__item">
+                @@include('html/menu-select.html', {
+                  "title": "АЗС",
+                  "target": "petrol",
+                  "items": '[{"title": "Лукойл"}, {"title": "Роснефть"}, {"title": "Газпромнефть"}, {"title": "ТНК"}, {"title": "BP"}, {"title": "Татнефть"}]'
+                })
+              </li>
+              <li class="navbar-menu__item">
+                <a class="navbar-menu__link" href="#">
+                  Цены на топливо
+                </a>
+              </li>
+              <li class="navbar-menu__item">
+                @@include('html/menu-select.html', {
+                  "title": "О компании",
+                  "target": "about",
+                  "items": '[{"title": "Презентация"}, {"title": "Отзывы"}, {"title": "Блог"}]'
+                })
+              </li>
+              <li class="navbar-menu__item">
+                <a class="navbar-menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-delivery sections">
+      <div class="container">
+        <h2 class="section-title section-delivery__title">Доставка топлива</h2>
+        <form class="delivery-form">
+          <h3 class="delivery-form__title">
+            Быстрый <span class="text-primary-color">заказ топлива</span>
+          </h3>
+          <div class="delivery-form__data">
+            <div class="delivery-form__input-group">
+              <label class="delivery-form__input-title" for="delivery-input-name">Ваше имя</label>
+              <input class="delivery-form__input primary-input reset" id="delivery-input-name" name="name" type="text" placeholder="Иван" required>
+            </div>
+            <div class="delivery-form__input-group">
+              <label class="delivery-form__input-title" for="delivery-input-phone">Номер телефона</label>
+              <input class="delivery-form__input primary-input reset" id="delivery-input-phone" name="phone" type="tel" placeholder="+7(___)___-__-__" required>
+            </div>
+            <button class="delivery-form__submit reset" type="submit">Заказать топливо</button>
+          </div>
+          <div class="delivery-form__checkbox-group">
+            <input class="delivery-form__checkbox" id="form-checkbox" type="checkbox" required>
+            <span class="custom-checkbox">
+              <svg aria-hidden="true">
+                <use xlink:href="#check-mark"></use>
+              </svg>
+            </span>
+            <label class="delivery-form__checkbox-title" for="form-checkbox">Я согласен с условиями обработки данных</label>
+          </div>
+          <span class="delivery-form__service-msg js-service-msg"></span>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-cost sections">
+      <div class="container">
+        <h2 class="section-title section-cost__title">Доставка топлива</h2>
+        <div class="table-wrapper">
+          @@include('html/table-cost.html')
+        </div>
+      </div>
+    </section>
+
+    <section class="section-calc sections">
+      <div class="container">
+        <h2 class="section-title section-calc__title">Топливо с доставкой</h2>
+        <form class="form-calc">
+          <span class="form-calc__service-msg js-service-msg"></span>
+          <div class="form-calc__inputs">
+            <div class="form-calc__input-group">
+              <label class="form-calc__input-title" for="">Вид топлива</label>
+              <select class="form-calc__selector" id="selector-fuel" name="select">
+                <option value="ДТ">ДТ</option>
+                <option value="АИ-95">АИ-98</option>
+                <option value="АИ-95">АИ-95</option>
+                <option value="АИ-95">АИ-92</option>
+              </select>
+            </div>
+            <div class="form-calc__input-group">
+              <label class="form-calc__input-title" for="range-slider-input">Объем топлива</label>
+              <input class="form-calc__input primary-input reset" type="text" name="valueFuel" id="range-slider-input">
+              <div class="range-slider" id="slider"></div>
+            </div>
+            <div class="form-calc__input-group">
+              <label class="form-calc__input-title" for="calc-input-address">Место доставки</label>
+              <input class="form-calc__input primary-input reset" type="text" name="address" id="calc-input-address" placeholder="Укажите место" required>
+            </div>
+            <div class="form-calc__input-group">
+              <label class="form-calc__input-title" for="calc-input-name">Ваше имя</label>
+              <input class="form-calc__input primary-input reset" type="text" name="name" id="calc-input-name" placeholder="Иван" required>
+            </div>
+            <div class="form-calc__input-group">
+              <label class="form-calc__input-title" for="calc-input-phone">Номер телефона</label>
+              <input class="form-calc__input primary-input reset" type="text" name="phone" id="calc-input-phone" placeholder="+7(___)___-__-__" required>
+            </div>
+          </div>
+          <div class="check">
+            <h3 class="check__title">Итого</h3>
+            <div class="calc-element">
+              <div class="calc-element__info">
+                <span class="calc-element__title">Стоимость топлива</span>
+              </div>
+              <span class="calc-element__value" id="value-fuel"></span>
+            </div>
+            <div class="calc-element">
+              <div class="calc-element__info">
+                <span class="calc-element__title">Цена за литр:</span>
+                <span class="calc-element__desc">Цена и стоимость указаны ориентировочно. Точные цену и стоимость собщит наш менеджер при подтверждении заявки.</span>
+              </div>
+              <span class="calc-element__value" id="price-fuel">45.50</span>
+            </div>
+            <div class="calc-element">
+              <div class="calc-element__info">
+                <span class="calc-element__title">Выгода:</span>
+                <span class="calc-element__desc">При цене на АЗС  49.59 ₽ за литр, цены актуальны на 23.11.2020 г.</span>
+              </div>
+              <span class="calc-element__value" id="value-profit"></span>
+            </div>
+            <button class="form-calc__submit reset" type="submit">Заказать топливо</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-process sections">
+      <div class="container">
+        <h2 class="section-title section-process__title">Как мы работаем</h2>
+          <ul class="section-process__list reset">
+            @@loop('html/process-step.html', [
+              {
+                "title": "Оформление заявки",
+                "desc": "Заполните заявку на сайте, укажите удобное для вас место приезда заправщика, сорт и количество топлива, которое хотите купить",
+                "time": "1-3 мин.",
+                "icon": "click"
+              },
+              {
+                "title": "Подтверждение заявки менеджером",
+                "desc": "Дождитесь звонка нашего менеджера для уточнения условий заказа",
+                "time": "1-3 мин.",
+                "icon": "phone-call"
+              },
+              {
+                "title": "Заправка вашего автомобиля",
+                "desc": "В назначенное время приедет заправщик и заправит автомобиль топливом.",
+                "addDesc": "Если у заказчика есть действующий договор на топливные карты, то при оплате можно провести транзакцию через терминал. Переносное устройство есть у каждого заправщика",
+                "time": "30-90 мин.",
+                "icon": "oil"
+              }
+            ])
+          </ul>
+        </div>
+    </section>
+
+    <section class="section-benefits sections">
+      <div class="container">
+        <h2 class="section-benefits__title section-title">Преимущества сервиса</h2>
+        <ul class="section-benefits__list reset">
+          @@loop('html/benefit.html', [
+            {"title": "Качество топлива", "icon": "certificate"},
+            {"title": "Бережем ваше время и нервы", "icon": "clock"},
+            {"title": "Цена", "icon": "coin"},
+            {"title": "Ваш комфорт—наша забота", "icon": "place"},
+            {"title": "Безопасность процесса", "icon": "shield"},
+            {"title": "Несколько ТС в одном месте?", "icon": "way"},
+          ])
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-certificates sections">
+      <div class="container">
+        <div class="section-certificates__swiper swiper" id="swiper-certificates">
+          <h2 class="section-certificates__title section-title">Сертификаты качества топлива</h2>
+          <ul class="section-certificates__list swiper-wrapper reset">
+            @@loop('html/certificate.html', [
+              {"img": "@img/cert-1.webp"},
+              {"img": "@img/cert-2.webp"},
+              {"img": "@img/cert-3.webp"},
+              {"img": "@img/cert-4.webp"},
+              {"img": "@img/cert-4.webp"},
+            ])
+          </ul>
+          <div class="swiper-btns">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-partners sections">
+      <div class="container">
+        <h2 class="section-partners__title section-title">Наши партнеры</h2>
+        <div class="section-partners__swiper swiper" id="swiper-partners">
+          <ul class="section-partners__list swiper-wrapper reset">
+            @@loop('html/partners.html', [
+              {"img": "@img/lukoil.svg", "name": "Лукойл"},
+              {"img": "@img/gazprom.svg", "name": "Газпром"},
+              {"img": "@img/rosneft.svg", "name": "Роснефть"},
+              {"img": "@img/tatneft.svg", "name": "Татнефть"},
+              {"img": "@img/lukoil.svg", "name": "Лукойл"},
+              {"img": "@img/rosneft.svg", "name": "Роснефть"},
+            ])
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-feedback sections">
+      <div class="container">
+        <div class="section-feedback__swiper swiper" id="swiper-feedback">
+          <h2 class="section-feedback__title section-title">Отзывы</h2>
+          <ul class="section-feedback__list swiper-wrapper reset">
+            @@loop('html/feedback.html', [
+              {
+                "writer": "Гусев Вячеслав",
+                "writerDesc": "Индивидуальный предприниматель",
+                "text": "Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.",
+                "link": "#"
+              },
+              {
+                "writer": "Зеленов Евгений",
+                "writerDesc": "Гененеральный директор трансопртной компании",
+                "text": "Mi auctor sit habitasse sed mi cras ullamcorper massa sed. In augue fames sodales pretium, at scelerisque. Pulvinar a mattis pharetra mi, aliquet sem tristique lorem eleifend. Nisl, scelerisque ut libero, pellentesque. Tincidunt vestibulum volutpat lacus imperdiet morbi vulputate tristique facilisi.",
+                "link": "#"
+              },
+              {
+                "writer": "Гусев Вячеслав",
+                "writerDesc": "Индивидуальный предприниматель",
+                "text": "Velit, lectus sit urna tincidunt augue. Cursus vulputate pellentesque faucibus euismod. Diam pharetra, non, ut integer dui feugiat porttitor at. Non, dignissim enim viverra fringilla sit. Etiam justo a dignissim sociis vitae, nisi, justo, feugiat.",
+                "link": "#"
+              },
+            ])
+          </ul>
+          <div class="section-feedback__swiper-btns swiper-btns">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="section-feedback__btns">
+          <a class="section-feedback__link" href="#">Читать все отзывы</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-request sections">
+      <div class="section-request__container container">
+        <h2 class="section-request__title section-title">Остались вопросы?</h2>
+        <p class="section-request__desc">Готовы ответить на любой ваш вопрос. Оставьте свой номер телефона и мы свяжемся с вами в ближайшее время</p>
+        <form class="request-form">
+          <div class="request-form__input-group">
+            <input class="request-form__input primary-input reset" id="request-form-name" name="name" type="text" placeholder="Выше имя" required >
+          </div>
+          <div class="request-form__input-group">
+            <input class="request-form__input primary-input reset" id="request-form-phone" name="phone" type="text" placeholder="Номер телефона" required>
+          </div>
+          <button class="request-form__submit reset" type="submit">Перезвоните мне</button>
+          <span class="request-form__service-msg js-service-msg"></span>
+        </form>
+        <span class="section-request__text">Нажимая на кномпу "Позвонить мне" вы соглашаетесь с <a class="section-request__link" href="#">политикой конфиденциальности</a></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid-table">
+        <div class="footer__info">
+          <a href="" class="footer__logo-link">
+            <img src="@img/logo.png" alt="Логотип">
+          </a>
+          <span class="footer__info-text">© 2019 ООО "Процессинг 24"</span>
+        </div>
+        <ul class="footer__menu reset">
+          @@loop('html/footer-menu.html', [
+            {"title": "Карта АЗС", "link": "#"},
+            {"title": "АЗС по брендам", "link": "#"},
+            {"title": "АЗС по регионам", "link": "#"},
+            {"title": "Доставка топлива", "link": "#"},
+            {"title": "Контакты", "link": "#"},
+            {"title": "О компании", "link": "#"},
+            {"title": "Личный кабинет", "link": "#"},
+          ])
+        </ul>
+        <div class="footer__contacts">
+          <span class="contact-title">Отдел продаж</span>
+          <a class="contact-link" href="tel: +74951278170">8 (495) 127-81-70</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

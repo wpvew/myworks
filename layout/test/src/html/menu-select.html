@@ -1,0 +1,15 @@
+<div class="menu-select">
+  <button class="menu-select__btn reset js-header-dropdown-btn" data-path="@@target">
+    <span class="menu-select__heading">
+      @@title
+    </span>
+  </button>
+
+  <div class="menu-select__dropdown js-header-drop" data-target="@@target">
+    <div class="menu-select__dropdown-wrap" data-simplebar>
+      <ul class="menu-select__category-list reset">
+        @@loop('./select-items.html', @@items)
+      </ul>
+    </div>
+  </div>
+</div>

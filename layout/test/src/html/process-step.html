@@ -1,0 +1,13 @@
+<li class="section-process__item">
+  <div class="process-step">
+    <svg class="process-step__icon" aria-hidden="true">
+      <use xlink:href="#@@icon"></use>
+    </svg>
+    <h3 class="process-step__title">@@title</h3>
+    <p class="process-step__desc">@@desc</p>
+    @@if(context.addDesc) {
+      <p class="process-step__add-desc">@@addDesc</p>
+    }
+    <span class="process-step__time">@@time</span>
+  </div>
+</li>
