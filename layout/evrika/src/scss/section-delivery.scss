@@ -1,0 +1,183 @@
+.section-delivery {
+  &__title {
+    @include resetIndent;
+    @include fontClass(48px, 1, 700);
+    margin-bottom: 48px;
+  }
+}
+
+.delivery-form {
+  padding: 50px 96px 40px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    @include resetIndent;
+    @include fontClass(36px, 1, 700);
+    margin-bottom: 30px;
+  }
+
+  &__data {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: minmax(200px, 273px) minmax(200px, 273px) 251px;
+    align-items: flex-end;
+    gap: 15px;
+
+    & > * {
+      align-self: flex-end;
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input-title {
+    margin-bottom: 10px;
+    @include fontClass(12px, 1, 500);
+  }
+
+  &__submit {
+    @include primaryBtn;
+    padding-left: 65px;
+    padding-right: 65px;
+    @include hoverBtn;
+  }
+
+  &__checkbox-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox-title {
+    padding-left: 16px;
+    @include fontClass(14px, 1, 400);
+    cursor: pointer;
+    @include hoverLink;
+  }
+
+  &__checkbox {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked + .custom-checkbox {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &.focus-visible {
+      & + .custom-checkbox {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  &__service-msg {
+    @include fontClass(18px, 1, 600);
+    padding: 20px 0 0;
+    display: none;
+    text-align: center;
+
+    &.active {
+      display: block
+    }
+  }
+}
+
+.custom-checkbox {
+  @extend .delivery-form__checkbox;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $grayD4;
+  opacity: 1;
+  z-index: -1;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    opacity: 0;
+  }
+}
+
+
+@media all and (max-width: 960px) {
+  .delivery-form {
+    padding: 30px 50px;
+
+    &__data {
+      grid-template-columns: minmax(193px,273px) minmax(193px,273px) minmax(193px,251px);
+    }
+
+    &__submit {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .section-delivery {
+    &__title {
+      margin-bottom: 24px;
+      font-size: 38px;
+    }
+  }
+  .delivery-form {
+    &__title {
+      font-size: 28px;
+    }
+
+    &__data {
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__input-group {
+      flex-grow: 1;
+    }
+
+    &__input {
+      width: 100%;
+    }
+
+    &__submit {
+      flex-grow: 1;
+    }
+
+    &__checkbox {
+      width: 18px;
+      height: 18px;
+    }
+
+    &__checkbox-title {
+      padding-left: 8px;
+      font-size: 12px;
+    }
+  }
+}
+
+@media all and (max-width: 440px) {
+  .section-delivery {
+    &__title {
+      margin-bottom: 14px;
+      font-size: 28px;
+    }
+  }
+  .delivery-form {
+    padding: 25px 20px;
+
+    &__title {
+      font-size: 22px;
+    }
+  }
+}

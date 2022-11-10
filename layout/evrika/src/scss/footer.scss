@@ -1,0 +1,150 @@
+.footer {
+  background-color: $grayF9;
+
+  &__grid-table {
+    display: grid;
+    grid-template-columns: 250px minmax(376px, 610px) minmax(157px, 260px);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info-text {
+    @include fontClass(14px, 1, 400);
+    color: $gray56;
+  }
+
+  &__logo-link {
+    margin-bottom: 20px;
+  }
+
+  &__menu {
+    column-count: 2;
+    justify-self: flex-end;
+    column-width: 180px;
+  }
+
+  &__menu-item {
+    @include fontClass(14px, 1, 700);
+    margin-bottom: 10px;
+  }
+
+  &__mene-link {
+    color: $gray56;
+    @include hoverLink;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+  }
+}
+
+.contact-title {
+  @include fontClass(14px, 1, 700);
+  margin-bottom: 5px;
+}
+
+.contact-link {
+  @include fontClass(18px, 1, 700);
+  color: $primary-color;
+  transition: color .3s ease-in-out;
+
+  &:hover, &.focus-visible {
+    color: $secondary-color;
+  }
+
+  &:active {
+    color: $black;
+  }
+}
+
+.up-footer {
+  padding: 50px 0;
+}
+
+.down-footer {
+  padding: 12px 0;
+  background-color: $white;
+
+  &__text {
+    @include fontClass(12px, 1, 400);
+  }
+}
+
+
+
+@media all and (max-width: 960px) {
+  .footer {
+    &__grid-table {
+      grid-template-columns: 250px minmax(150px, 610px) minmax(157px, 160px);
+    }
+
+    &__menu {
+      column-count: 2;
+      column-width: 100px;
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .footer {
+    &__grid-table {
+      grid-template-columns: minmax(150px, 250px) minmax(200px, 467px);
+      gap: 15px;
+    }
+
+    &__logo-link {
+      margin-bottom: 5px;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info-text {
+      font-size: 11px;
+    }
+
+    &__menu {
+      column-count: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    &__contacts {
+      align-items: flex-start;
+    }
+  }
+}
+
+@media all and (max-width: 440px) {
+  .footer {
+    padding: 20px 0 0;
+    &__grid-table {
+      grid-template-columns: minmax(0, 208px) minmax(0, 208px);
+      gap: 15px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__contacts {
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
+  .contact-title {
+    font-size: 12px;
+  }
+  .contact-link {
+    font-size: 14px;
+  }
+}

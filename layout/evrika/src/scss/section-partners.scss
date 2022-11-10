@@ -1,0 +1,16 @@
+.section-partners {
+  &__list {
+    padding-bottom: 60px;
+    align-items: flex-end;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 20px;
+  }
+}
