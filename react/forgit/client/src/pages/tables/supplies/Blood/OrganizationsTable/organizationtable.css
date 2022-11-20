@@ -1,0 +1,15 @@
+.ag-theme-alpine {
+  --ag-header-column-separator-display: block;
+  --ag-header-column-separator-height: 100%;
+  --ag-header-column-separator-width: 1px;
+  --ag-header-column-separator-color: #babfc7;
+  --ag-header-column-resize-handle-display: none;
+}
+
+.ag-header-group-cell-label {
+  justify-content: center;
+}
+
+.cell-wrap-text {
+  white-space: normal !important;
+}
