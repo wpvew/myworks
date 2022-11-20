@@ -74,7 +74,7 @@ export const fetchSaveSupplyBlood = createAsyncThunk(
       if (errors.every((error) => !error) && res.length) {
         dispatch(fetchSupplyBlood());
       } else {
-        const fillErrors = errors.map((error) => error.message.errors.map((error) => error.message)).flat();
+        const fillErrors = errors.map((error) => error.message?.errors.map((error) => error.message)).flat();
         const uniqueErrors = Array.from(new Set(fillErrors));
         return uniqueErrors;
       }
@@ -107,6 +107,7 @@ const supplyBloodSlice = createSlice({
     },
     removeRow: (state, action) => {
       state.supplyBlood = state.supplyBlood.filter((item) => !action.payload.includes(item.id));
+      state.error = emptyError;
     },
     clearSupplyBlood: (state, action) => {
       state.supplyBlood = [];
