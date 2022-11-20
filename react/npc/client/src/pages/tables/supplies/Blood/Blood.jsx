@@ -54,7 +54,6 @@ const Blood = () => {
               alignItems={'center'}
               bgcolor={'#f8f8f8'}
               border={'1px solid #babfc7'}
-              maxHeight={'80px'}
             >
               <ControlPanel />
             </Grid>

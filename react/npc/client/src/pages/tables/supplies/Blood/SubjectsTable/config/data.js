@@ -1,4 +1,4 @@
-import { UITooltip } from '../../../../../../components/UI/UITooltip';
+import UITooltip from '../../../../../../components/UI/UITooltip/UITooltip';
 
 export const columnDefs = [
   {

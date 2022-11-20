@@ -15,7 +15,7 @@ const ControlPanel = () => {
   const { selectedSubject } = useAppSelector((state) => state.subjectsReducer);
 
   return (
-    <Grid container columnSpacing={{ xs: 1, lg: 3 }}>
+    <Grid container spacing={{ xs: 1, lg: 3 }}>
       <Grid item pl={0} xs={6} md={3} lg={2}>
         <UIButton onClick={() => dispatch(fetchCreateNewRow())} disabled={!selectedSubject}>
           Добавить

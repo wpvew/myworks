@@ -11,16 +11,14 @@ import 'ag-grid-community/styles/ag-theme-alpine.css';
 import './subjectstable.css';
 
 function SubjectsTable() {
-  const gridStyle = useMemo(() => ({ height: '100%', width: '220px' }), []);
-
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [rowData, setRowData] = useState([{ id: '', subject: '' }]);
   const [gridApi, setGridApi] = useState(null);
   const [overlayNoRowsTemplate, setOverlayNoRowsTemplate] = useState('Субъекты не найдены');
   const { subjects, selectedSubject, loading, error } = useAppSelector((state) => state.subjectsReducer);
+  const gridStyle = useMemo(() => ({ height: '100%', width: '220px' }), []);
 
-  const gridRef = useRef();
   useEffect(() => {
     if (gridApi) {
       if (loading && !error.message) gridApi.showLoadingOverlay();
@@ -63,7 +61,6 @@ function SubjectsTable() {
     <div className='subjects-table'>
       <div style={gridStyle} className='ag-theme-alpine'>
         <AgGridReact
-          ref={gridRef}
           onGridReady={onGridReady}
           rowData={rowData}
           columnDefs={columnDefs}
