@@ -21,7 +21,7 @@ class SupplyBlood {
     try {
       const data = req.body instanceof Array
         ? req.body.map((item) => new MakeSupplyFromDataWithError(item).data)
-        : req.body;
+        : [new MakeSupplyFromDataWithError(req.body).data];
       const supplyBlood = await (SupplyBloodModel.bulkCreate(data))
         .catch((error) => {
           throw new ApiError(error.parent.code, error.parent.detail);
@@ -36,7 +36,7 @@ class SupplyBlood {
     try {
       const data = req.body instanceof Array
         ? req.body.map((item) => ({ id: item.id, ...new MakeSupplyFromDataWithError(item).data }))
-        : req.body;
+        : [{ id: req.body.id, ...new MakeSupplyFromDataWithError(req.body).data }];
       const supplyBlood = await SupplyBloodModel
         .bulkCreate(data, {
           updateOnDuplicate: Object.keys(new MakeSupplyFromData({}).data),
