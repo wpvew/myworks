@@ -1,0 +1,19 @@
+.subjects-table {
+  height: 100%;
+}
+
+.ag-cell {
+  padding: 0 10px;
+}
+
+.ag-cell-value {
+  font-size: 12px;
+}
+
+.subjects-table__row {
+  cursor: pointer;
+}
+
+.ag-root-wrapper {
+  overflow: visible;
+}
