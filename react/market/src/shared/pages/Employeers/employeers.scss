@@ -1,0 +1,34 @@
+@import '../../styles/mixin', '../../styles/var';
+
+.main {
+  @include main;
+  background-color: #F8FAFF;
+}
+
+.list {
+}
+
+.test {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.empl {
+  // padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: $color-white;
+}
+
+.header {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid $color-black;
+}
+
+.header, .item {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

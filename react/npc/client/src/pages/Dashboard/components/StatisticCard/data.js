@@ -3,7 +3,7 @@ import { generateId } from '../../../../utils/generateRandomIndex';
 
 const statisticCardData = [
   {
-    title: 'Готовность к выполнению мобилизационных заданий',
+    title: 'Готовность к выполнению заданий',
     data: [{ name: 'Всего моб. заданий', value: '3' }],
     complitedOn: 27,
   },

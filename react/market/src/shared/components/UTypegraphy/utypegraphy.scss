@@ -1,0 +1,37 @@
+@import '../../styles/mixin';
+@import '../../styles/fonts';
+
+.typography {
+  @include reset;
+  line-height: 1;
+}
+
+.xs {
+  font-size: 12px;
+}
+.s {
+  font-size: 14px;
+}
+.m {
+  font-size: 16px;
+}
+.l {
+  font-size: 22px;
+}
+.xl {
+  font-size: 26px;
+}
+
+.titleL, .titleM, .titleS {
+  font-family: Nekst, serif;
+}
+
+.titleL {
+  font-size: 60px;
+}
+.titleM {
+  font-size: 40px;
+}
+.titleS {
+  font-size: 32px;
+}

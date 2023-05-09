@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './visible.css'
+import styles from './visible.css';
 import classNames from 'classnames';
 
 export enum EScreens {
@@ -16,18 +16,19 @@ export enum EDisplay {
 }
 
 interface IVisibleProps {
-  children: React.ReactNode,
-  screens: EScreens[],
-  typeDisplay: EDisplay
+  children: React.ReactNode;
+  screens: EScreens[];
+  typeDisplay: EDisplay;
 }
 
 const Visible = ({ children, screens, typeDisplay }: IVisibleProps) => {
-
   return (
-    <div className={classNames(
-      screens.map(screen => styles[screen]),
-      styles[typeDisplay]
-    )}>
+    <div
+      className={classNames(
+        screens.map((screen) => styles[screen]),
+        styles[typeDisplay]
+      )}
+    >
       {children}
     </div>
   );

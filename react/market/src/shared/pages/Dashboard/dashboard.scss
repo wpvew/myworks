@@ -1,0 +1,6 @@
+@import '../../styles//mixin';
+
+.main {
+  @include main;
+  background-color: #F8FAFF;
+}

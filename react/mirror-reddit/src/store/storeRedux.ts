@@ -10,10 +10,10 @@ import { TUpdatePostsListData, TUpdatePostsListDataError, TUpdatePostsListDataSu
 import { PostsListDataReducer, TPostsList } from './postsList/reducer';
 import { TUpdateSearchInput, UPDATE_SEARCH_INPUT } from './searchPosts/action';
 import { TUpdateSortSelect, UPDATE_SORT_SELECT } from './sortPosts/action';
-import { defaultSortSelectValue, TSortSelectValue } from '../shared/Header/SortBlock';
+import { defaultSortSelectValue, TSortSelectValue } from '../layouts/Header/SortBlock';
 
 import { SET_TOKEN, TSetTokenAction } from './token/action';
-import { defaultPostTab, TPostTab } from '../shared/Header/PostTabs';
+import { defaultPostTab, TPostTab } from '../layouts/Header/PostTabs';
 import { TUpdatePostTabs, UPDATE_POST_TABS } from './postTabs/action';
 import { TActionsPost, TUpdateActionsPost, UPDATE_ACTIONS_POST } from './actionsPost/action';
 import { TUpdateModalStatus, UPDATE_MODAL_STATUS } from './modalStatus/action';

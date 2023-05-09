@@ -1,0 +1,39 @@
+@import '../../styles/_var';
+
+.navbar {
+  padding-right: 50px;
+  flex-shrink: 0;
+}
+
+.navitem {
+  position: relative;
+  padding: 15px;
+  border-radius: 8px;
+  color: $color-black;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+
+  &.active {
+    background-color: $color-primary;
+    color: white;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}
+
+.navlink {
+  font-size: 16px;
+  color: currentColor;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,37 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  list-style: none;
+}
+
+@mixin visually-hidden  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin fontClass($fontSize, $fontLineHeaight, $fontWeight) {
+  font: {
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $fontLineHeaight;
+}
+
+@mixin main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  background: linear-gradient(180deg, rgba(91,91,91,0) 0%, rgba(240,244,255,1) 100%);
+}

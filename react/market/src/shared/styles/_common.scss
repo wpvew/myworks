@@ -1,0 +1,30 @@
+@import './fonts.scss';
+@import './var', './mixin';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  @include reset;
+  font-family: Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+ul, a, button {
+  @include reset;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}

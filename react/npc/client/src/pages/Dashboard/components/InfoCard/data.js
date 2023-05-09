@@ -42,7 +42,7 @@ const infoCardData = [
     icon: <BusinessCenterIcon sx={styleData()} />,
   },
   {
-    title: 'Моб. план',
+    title: 'Планы',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. At veritatis temporibus porro eum animi, sed odit totam ratione rem sequi corrupti excepturi placeat eius inventore ut enim nihil deserunt id.',
     icon: <CalendarMonthIcon sx={styleData()} />,

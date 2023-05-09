@@ -1,0 +1,43 @@
+.inputGroup {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.formHeader {
+  text-align: center;
+}
+
+.title {
+  margin-right: 10px;
+  &.right {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.input {
+  margin-left: auto;
+  padding: 8px 12px;
+  min-width: 300px;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+}
+
+.errorMsg {
+  position: absolute;
+  top: 0;
+  right: 3px;
+  color: red;
+  font-size: 10px;
+}
+
+.errorInput {
+  border-color: red;
+}

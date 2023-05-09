@@ -1,5 +1,5 @@
 import { ActionCreator } from 'redux';
-import { TSortSelectValue } from '../../shared/Header/SortBlock';
+import { TSortSelectValue } from '../../layouts/Header/SortBlock';
 
 export const UPDATE_SORT_SELECT = 'UPDATE_SORT_SELECT';
 export type TUpdateSortSelect = {

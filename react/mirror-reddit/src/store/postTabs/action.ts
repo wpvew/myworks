@@ -1,5 +1,5 @@
 import { ActionCreator } from 'redux';
-import { TPostTab } from '../../shared/Header/PostTabs';
+import { TPostTab } from '../../layouts/Header/PostTabs';
 
 export const UPDATE_POST_TABS = 'UPDATE_POST_TABS';
 export type TUpdatePostTabs = {

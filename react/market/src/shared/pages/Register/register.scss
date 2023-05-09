@@ -1,0 +1,60 @@
+
+@import '../../styles/mixin';
+
+.main {
+  @include main;
+}
+
+.register {
+  display: flex;
+  flex-grow: 1;
+  // background-color: rgba(240,244,255,1);
+}
+
+.box {
+  overflow: hidden;
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  border-radius: 8px;
+  border: 1px solid #F0F0F0;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px -3px;
+}
+
+.boxHeader {
+  padding: 0 100px;
+  margin-bottom: 50px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border: 1px solid #F0F0F0;
+  }
+}
+
+.form {
+  display: flex;
+  transition: transform .3s ease-in-out;
+
+  &.swiped {
+    transform: translateX(calc(-100% - 100px));
+    & > :first-child {
+      max-height: 0;
+    }
+  }
+
+  & > * {
+    width: 100%;
+    flex-shrink: 0;
+
+    &:last-child {
+      transform: translateX(100px);
+    }
+  }
+}

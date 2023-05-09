@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { hot } from 'react-hot-loader/root';
-import Header from './shared/Header/Header';
-import { CardsList } from './shared/Content/CardsList';
-import { Content } from './shared/Content';
+import Header from './layouts/Header/Header';
+import { CardsList } from './pages/Content/CardsList';
+import { Content } from './pages/Content';
 import { Layout } from './shared/Layout';
-import { Post } from './shared/Post';
+import { Post } from './layouts/Post';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './main.global.css';
 
@@ -13,9 +13,12 @@ import { applyMiddleware, createStore } from 'redux';
 import { Provider, useDispatch } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from './store/storeRedux';
-import { ErrorPage } from './shared/ErrorPage';
+import { ErrorPage } from './pages/ErrorPage';
 import { saveToken } from './store/token/action';
 import thunk from 'redux-thunk';
+import Routing from './router/Routing';
+import { fetchToken } from './newStore/slice/tokenSlice';
+import { useAppSelector } from './newStore/hooks';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 // const store = createStore();
@@ -23,9 +26,12 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 
 function AppWrap() {
   const dispatch = useDispatch();
+  // const token = useAppSelector((state) => state);
+  // console.log(token);
 
   useEffect(() => {
     dispatch(saveToken());
+    dispatch(fetchToken(localStorage.token));
   }, []);
 
   return (
@@ -33,22 +39,7 @@ function AppWrap() {
       <Layout>
         <Header />
         <Content>
-          <Routes>
-            <Route path='/posts' element={<CardsList />} />
-            <Route
-              path='/posts/:id'
-              element={
-                <>
-                  <CardsList />
-                  <Post />
-                </>
-              }
-            />
-            <Route path='/error404' element={<ErrorPage />} />
-            <Route path='/auth' element={<Navigate to='/posts' replace />} />
-            <Route path='/' element={<Navigate to='/posts' replace />} />
-            <Route path='*' element={<Navigate to='/error404' replace />} />
-          </Routes>
+          <Routing />
         </Content>
       </Layout>
     </BrowserRouter>
